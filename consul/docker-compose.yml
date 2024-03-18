@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  conusl:
+    image: hashicorp/consul
+    container_name: consul
+    networks:
+      - common
+    ports:
+      - "8500:8500"
+      - "8600:8600/udp"
+
+
+networks:
+  common:
+    external: true

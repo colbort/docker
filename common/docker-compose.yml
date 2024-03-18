@@ -1,0 +1,206 @@
+version: '3.5'
+# 网络配置
+# networks:
+#   backend:
+#     driver: ${NETWORKS_DRIVER}
+
+networks:
+  common:
+    external: true
+
+# 服务容器配置
+services:
+  etcd:
+    # 自定义容器名称
+    build:
+      context: ./etcd # 指定构建使用的 Dockerfile 文件
+    environment:
+      - TZ=${TZ}
+      - ALLOW_NONE_AUTHENTICATION=yes
+      - ETCD_ADVERTISE_CLIENT_URLS=http://etcd:2379
+    ports:
+      # 设置端口映射
+      - "${ETCD_PORT}:2379"
+    networks:
+      - common
+  #    restart: always
+
+  mysql:
+    build:
+      context: ./mysql
+    environment:
+      - TZ=${TZ}
+      - MYSQL_USER=${MYSQL_USERNAME} # 设置 Mysql 用户名称
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD} # 设置 Mysql 用户密码
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD} # 设置 Mysql root 用户密码
+      - MYSQL_SQL_MODE="NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES"
+    privileged: true
+    volumes:
+      - ${DATA_PATH_HOST}/mysql:/var/lib/mysql # 引用 .env 配置中 DATA_PATH_HOST 变量，将宿主机上存放 Mysql 数据的目录挂载到容器中 /var/lib/mysql 目录
+    ports:
+      - "${MYSQL_PORT}:3306" # 设置容器3306端口映射指定宿主机端口
+    networks:
+      - common
+  #    restart: always
+
+  redis:
+    build:
+      context: ./redis
+    environment:
+      - TZ=${TZ}
+    privileged: true
+    volumes:
+      - ${DATA_PATH_HOST}/redis:/data # 引用 .env 配置中 DATA_PATH_HOST 变量，将宿主机上存放 Redis 数据的目录挂载到容器中 /data 目录
+    ports:
+      - "${REDIS_PORT}:6379" # 设置容器6379端口映射指定宿主机端口
+    networks:
+      - common
+  #    restart: always
+
+  nacos-server:
+    build:
+      context: ./nacos-server
+    platform: linux/arm64
+    privileged: true
+    environment:
+      - TZ=Asia/Shanghai
+      - MODE=standalone
+      # - SPRING_DATASOURCE_PLATFORM=mysql
+      # - MYSQL_SERVICE_HOST=127.0.0.1
+      # - MYSQL_SERVICE_PORT=3306
+      # - MYSQL_SERVICE_USER=root
+      # - MYSQL_SERVICE_PASSWORD=123456
+      # - MYSQL_SERVICE_DB_NAME=nacos
+      # - MYSQL_SERVICE_DB_PARAM=characterEncoding=utf8&connectTimeout=10000&socketTimeout=3000&autoReconnect=true&useSSL=false&serverTimezone=UTC
+      - JVM_XMS=128m
+      - JVM_XMX=128m
+      - JVM_XMN=128m
+      - NACOS_AUTH_ENABLE=false
+    ports:
+      - "8848:8848"
+    networks:
+      - common
+
+  nats:
+    build:
+      context: ./nats
+    volumes:
+      - ${DATA_PATH_HOST}/nats/jetstream:/tmp/nats/jetstream
+    container_name: nats
+    ports:
+      - "4222:4222"
+    networks:
+      - common
+    # environment:
+    #   - NATS_CONFIG=/nats_config/nats.conf
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.15.1
+    # container_name: elasticsearch
+    environment:
+      - node.name=elasticsearch
+      - discovery.seed_hosts=elasticsearch
+      - cluster.initial_master_nodes=elasticsearch
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      # 启用 Elasticsearch 的基本许可证（无需证书）
+      - xpack.license.self_generated.type=basic
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    networks:
+      - common
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.15.1
+    # container_name: kibana
+    ports:
+      - "5601:5601"
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    networks:
+      - common
+
+  logstash:
+    image: docker.elastic.co/logstash/logstash:7.15.1
+    container_name: logstash
+    volumes:
+      - ./logstash/config:/usr/share/logstash/pipeline
+    ports:
+      - "5044:5044"
+      - "5000:5000"
+    environment:
+      - "ES_JAVA_OPTS=-Xms256m -Xmx256m"
+    depends_on:
+      - elasticsearch
+    networks:
+      - common
+
+  postgres:
+    build:
+      context: ./postgres
+    #    restart: always
+    environment:
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_USER: root
+      PGDATA: /var/lib/postgresql/data/pgdata
+      TZ: ${TZ}
+    volumes:
+      - ${DATA_PATH_HOST}/postgres:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    command:
+      [
+        "postgres",
+        "-c",
+        "shared_preload_libraries=pg_stat_statements,uuid-ossp"
+      ]
+    networks:
+      - common
+
+  nginx:
+    image: nginx
+    ports:
+      - "8080:80"
+    volumes:
+      #      - ${DATA_PATH_HOST}/nginx/conf.d:/etc/nginx/conf.d/
+      - ${DATA_PATH_HOST}/nginx/app:/usr/share/nginx/html/app
+      - ${DATA_PATH_HOST}/nginx/log:/var/log/nginx
+    networks:
+      - common
+
+  promtail:
+    image: grafana/promtail:latest
+    volumes:
+      - ${DATA_PATH_HOST}/promtail:/etc/promtail
+    command: -config.file=/etc/promtail/config.yaml
+
+  mongodb:
+    image: mongo:${MONGODB_IMAGE_VERSION-6.0.2}
+    ports:
+      - "37017:27017"
+    container_name: mongo
+    command: --wiredTigerCacheSizeGB 1 --auth
+    volumes:
+      - "${DATA_PATH_HOST}/mongodb/data/db:/data/db"
+      - "${DATA_PATH_HOST}/mongodb/data/logs:/data/logs"
+      - "${DATA_PATH_HOST}/mongodb/data/conf:/etc/mongo"
+      - "./scripts/mongo-init.sh:/docker-entrypoint-initdb.d/mongo-init.sh:ro"
+    environment:
+      - TZ=Asia/Shanghai
+      - wiredTigerCacheSizeGB=1
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_USERNAME:-root}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_PASSWORD:-openIM123}
+      - MONGO_INITDB_DATABASE=${MONGO_DATABASE:-openim_v3}
+      - MONGO_OPENIM_USERNAME=${MONGO_OPENIM_USERNAME:-openIM} # Non-root username
+      - MONGO_OPENIM_PASSWORD=${MONGO_OPENIM_PASSWORD:-openIM123} # Non-root password
+
+volumes:
+  esdata:
+    driver: local

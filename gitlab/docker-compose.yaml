@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  gitlab:
+    image: yrzr/gitlab-ce-arm64v8
+    container_name: gitlab
+    # restart: always
+    privileged: true  # 获取主机 root 权限
+#    platform: linux/amd64
+    networks:
+      - common
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://gitlab'
+        gitlab_rails['gitlab_shell_ssh_port'] = 8022
+        postgresql['max_wal_size'] = '1GB'  # 适当调整数值
+    ports:
+      - '8099:80'
+      - '8443:443'
+      - '8022:22'
+    volumes:
+      - ./data/etc:/etc/gitlab
+      - ./data/log:/var/log/gitlab
+      - ./data/data:/var/opt/gitlab
+
+
+networks:
+  common:
+    external: true
+

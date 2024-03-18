@@ -1,0 +1,15 @@
+.idea
+.vscode
+common/data/mongodb/data/db/
+common/data/mongodb/data/logs/
+common/data/mysql/
+common/data/nginx/app/
+common/data/nginx/log/
+common/data/postgres/
+common/data/redis/
+gitlab/data/data/
+gitlab/data/log/
+harbor/data/
+harbor/log/
+jenkins/jenkins_home/
+portainer/data/

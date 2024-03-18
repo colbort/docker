@@ -1,0 +1,3 @@
+FROM nats
+
+CMD ["-js"]
