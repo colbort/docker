@@ -1,0 +1,81 @@
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【Server】WuKongIM is Starting..."}
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【Server】  Using config file:  /root/wukongim/wk.yaml"}
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【Server】  Mode:  debug"}
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【Server】  Version:  v1.0.0"}
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【Server】  Git:  1711112255-6aa2ef88e2031049d92224ba56b8cba8742ea562"}
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【Server】  Go build:  go1.20.14"}
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【Server】  DataDir:  /root/wukongim/data"}
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【Server】Listening  for TCP client on tcp://0.0.0.0:5100"}
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【Server】Listening  for WS client on ws://0.0.0.0:5200"}
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【Server】Listening  for Manager Http api on http://0.0.0.0:5001"}
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【Server】Listening  for Monitor on 0.0.0.0:5300"}
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【APIServer】Server started","addr":"0.0.0.0:5001"}
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【MonitorServer】MonitorServer started","addr":"0.0.0.0:5300"}
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【MonitorServer】Monitor web address： http://localhost:5300/web"}
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【DemoServer】Demo server started","addr":"0.0.0.0:5172"}
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【DemoServer】Chat demo address： http://localhost:5172/chatdemo"}
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【Server】Server is ready"}
+{"level":"info","time":"2024-03-22 22:10:52","msg":"【Server】Server is Stoping..."}
+{"level":"info","time":"2024-03-22 22:10:52","msg":"【Server】Server is exited"}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【Server】WuKongIM is Starting..."}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【Server】  Using config file:  /root/wukongim/wk.yaml"}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【Server】  Mode:  debug"}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【Server】  Version:  v1.0.0"}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【Server】  Git:  1711112255-6aa2ef88e2031049d92224ba56b8cba8742ea562"}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【Server】  Go build:  go1.20.14"}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【Server】  DataDir:  /root/wukongim/data"}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【Server】Listening  for TCP client on tcp://0.0.0.0:5100"}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【Server】Listening  for WS client on ws://0.0.0.0:5200"}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【Server】Listening  for Manager Http api on http://0.0.0.0:5001"}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【Server】Listening  for Monitor on 0.0.0.0:5300"}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【APIServer】Server started","addr":"0.0.0.0:5001"}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【MonitorServer】MonitorServer started","addr":"0.0.0.0:5300"}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【MonitorServer】Monitor web address： http://localhost:5300/web"}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【DemoServer】Demo server started","addr":"0.0.0.0:5172"}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【DemoServer】Chat demo address： http://localhost:5172/chatdemo"}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【Server】Server is ready"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【Server】WuKongIM is Starting..."}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【Server】  Using config file:  /root/wukongim/wk.yaml"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【Server】  Mode:  debug"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【Server】  Version:  v1.0.0"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【Server】  Git:  1711112255-6aa2ef88e2031049d92224ba56b8cba8742ea562"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【Server】  Go build:  go1.20.14"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【Server】  DataDir:  ~/wukongim"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【Server】Listening  for TCP client on tcp://0.0.0.0:5100"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【Server】Listening  for WS client on ws://0.0.0.0:5200"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【Server】Listening  for WSS client on wss://0.0.0.0:5210"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【Server】Listening  for Manager Http api on http://0.0.0.0:5001"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【Server】Listening  for Monitor on 0.0.0.0:5300"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【APIServer】Server started","addr":"0.0.0.0:5001"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【MonitorServer】MonitorServer started","addr":"0.0.0.0:5300"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【MonitorServer】Monitor web address： http://localhost:5300/web"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【DemoServer】Demo server started","addr":"0.0.0.0:5172"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【DemoServer】Chat demo address： http://localhost:5172/chatdemo"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【Server】Server is ready"}
+{"level":"debug","time":"2024-03-22 22:41:02","msg":"【UserAPI】req","req":{"uid":"u_10000","token":"f3f6f93f09444e3289a0195b6a16cae2","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-22 22:41:02","msg":"【UserAPI】req","req":{"uid":"fileHelper","token":"c805cabf99444a2abcc5d12fb63008a5","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-22 22:41:02","msg":"【UserAPI】req","req":{"uid":"admin","token":"c4c4b60d9a2e4eb2859c7c02e92df62b","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-22 22:45:29","msg":"【UserAPI】req","req":{"uid":"u_10000","token":"d4b324d7f2c04a399fdd1499f44ba4ef","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-22 22:45:29","msg":"【UserAPI】req","req":{"uid":"fileHelper","token":"aa459eeb6c8a4d4188a4d6deeee828ce","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-22 22:45:29","msg":"【UserAPI】req","req":{"uid":"admin","token":"131ad9493f1e41c898377685c2c244d2","device_flag":0,"device_level":1}}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【Server】WuKongIM is Starting..."}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【Server】  Using config file:  /root/wukongim/wk.yaml"}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【Server】  Mode:  debug"}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【Server】  Version:  v1.0.0"}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【Server】  Git:  1711112255-6aa2ef88e2031049d92224ba56b8cba8742ea562"}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【Server】  Go build:  go1.20.14"}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【Server】  DataDir:  ~/wukongim"}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【Server】Listening  for TCP client on tcp://0.0.0.0:5100"}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【Server】Listening  for WS client on ws://0.0.0.0:5200"}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【Server】Listening  for WSS client on wss://0.0.0.0:5210"}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【Server】Listening  for Manager Http api on http://0.0.0.0:5001"}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【Server】Listening  for Monitor on 0.0.0.0:5300"}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【APIServer】Server started","addr":"0.0.0.0:5001"}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【MonitorServer】MonitorServer started","addr":"0.0.0.0:5300"}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【MonitorServer】Monitor web address： http://localhost:5300/web"}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【DemoServer】Demo server started","addr":"0.0.0.0:5172"}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【DemoServer】Chat demo address： http://localhost:5172/chatdemo"}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【Server】Server is ready"}
+{"level":"debug","time":"2024-03-22 23:11:02","msg":"【UserAPI】req","req":{"uid":"u_10000","token":"6efb95cf1a05426c80e987b806047fe3","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-22 23:11:02","msg":"【UserAPI】req","req":{"uid":"fileHelper","token":"4914e57ed7dc4130bc916bb10636b51f","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-22 23:11:02","msg":"【UserAPI】req","req":{"uid":"admin","token":"a284e0d0ed674e119e169e934222585f","device_flag":0,"device_level":1}}

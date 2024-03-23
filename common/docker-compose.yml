@@ -182,7 +182,7 @@ services:
     command: -config.file=/etc/promtail/config.yaml
 
   mongodb:
-    image: mongo:${MONGODB_IMAGE_VERSION-6.0.2}
+    image: mongo:latest
     ports:
       - "37017:27017"
     container_name: mongo
@@ -195,11 +195,26 @@ services:
     environment:
       - TZ=Asia/Shanghai
       - wiredTigerCacheSizeGB=1
-      - MONGO_INITDB_ROOT_USERNAME=${MONGO_USERNAME:-root}
-      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_PASSWORD:-openIM123}
-      - MONGO_INITDB_DATABASE=${MONGO_DATABASE:-openim_v3}
-      - MONGO_OPENIM_USERNAME=${MONGO_OPENIM_USERNAME:-openIM} # Non-root username
-      - MONGO_OPENIM_PASSWORD=${MONGO_OPENIM_PASSWORD:-openIM123} # Non-root password
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_PASSWORD}
+      - MONGO_INITDB_DATABASE=${MONGO_DATABASE}
+      - MONGO_OPENIM_USERNAME=${MONGO_OPENIM_USERNAME} # Non-root username
+      - MONGO_OPENIM_PASSWORD=${MONGO_OPENIM_PASSWORD} # Non-root password
+
+
+  minio:
+    image: minio/minio:${MINIO_IMAGE_VERSION:-RELEASE.2024-01-11T07-46-16Z}
+    ports:
+      - "${MINIO_PORT:-10005}:9000"
+      - "9090:9090"
+    container_name: minio
+    volumes:
+      - "${DATA_PATH_HOST}/mnt/data:/data"
+      - "${DATA_PATH_HOST}/mnt/config:/root/.minio"
+    environment:
+      MINIO_ROOT_USER: "${MINIO_ACCESS_KEY:-root}"
+      MINIO_ROOT_PASSWORD: "${MINIO_SECRET_KEY:-openIM123}"
+    command: minio server /data --console-address ':9090'
 
 volumes:
   esdata:
