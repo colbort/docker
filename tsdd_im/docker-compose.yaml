@@ -10,7 +10,7 @@ networks:
 
 # 服务容器配置
 services:
-  wukongim:
+  tsdd_im:
     # wukongim底层通讯服务
     image: zyuan909/wukongim:latest
     container_name: tsdd_im
@@ -27,8 +27,8 @@ services:
       - 5100:5100 # tcp端口
       - 5200:5200 # websocket端口
       - 5300:5300 # monitor端口
-  tsdd:
-    image: zyuan909/tsdd_server:latest
+  tsdd_server:
+    image: zyuan909/tsdd_server:v1.0.2
     container_name: tsdd_server
     ports:
       - "8090:8090"
@@ -39,5 +39,4 @@ services:
     networks:
       - common
     depends_on:
-      - redis
-      - wukongim
+      - tsdd_im

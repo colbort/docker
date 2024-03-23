@@ -14,6 +14,7 @@ services:
     # 自定义容器名称
     build:
       context: ./etcd # 指定构建使用的 Dockerfile 文件
+    container_name: common_etcd
     environment:
       - TZ=${TZ}
       - ALLOW_NONE_AUTHENTICATION=yes
@@ -28,6 +29,7 @@ services:
   mysql:
     build:
       context: ./mysql
+    container_name: common_mysql
     environment:
       - TZ=${TZ}
       - MYSQL_USER=${MYSQL_USERNAME} # 设置 Mysql 用户名称
@@ -46,6 +48,7 @@ services:
   redis:
     build:
       context: ./redis
+    container_name: common_redis
     environment:
       - TZ=${TZ}
     privileged: true
@@ -53,6 +56,7 @@ services:
       - ${DATA_PATH_HOST}/redis:/data # 引用 .env 配置中 DATA_PATH_HOST 变量，将宿主机上存放 Redis 数据的目录挂载到容器中 /data 目录
     ports:
       - "${REDIS_PORT}:6379" # 设置容器6379端口映射指定宿主机端口
+    command: redis-server --requirepass ${REDIS_PASSWD}
     networks:
       - common
   #    restart: always
@@ -60,6 +64,7 @@ services:
   nacos-server:
     build:
       context: ./nacos-server
+    container_name: common_nacos
     platform: linux/arm64
     privileged: true
     environment:
@@ -84,9 +89,9 @@ services:
   nats:
     build:
       context: ./nats
+    container_name: common_nats
     volumes:
       - ${DATA_PATH_HOST}/nats/jetstream:/tmp/nats/jetstream
-    container_name: nats
     ports:
       - "4222:4222"
     networks:
@@ -96,7 +101,7 @@ services:
 
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.15.1
-    # container_name: elasticsearch
+    container_name: common_elasticsearch
     environment:
       - node.name=elasticsearch
       - discovery.seed_hosts=elasticsearch
@@ -119,7 +124,7 @@ services:
 
   kibana:
     image: docker.elastic.co/kibana/kibana:7.15.1
-    # container_name: kibana
+    container_name: common_kibana
     ports:
       - "5601:5601"
     environment:
@@ -129,7 +134,7 @@ services:
 
   logstash:
     image: docker.elastic.co/logstash/logstash:7.15.1
-    container_name: logstash
+    container_name: common_logstash
     volumes:
       - ./logstash/config:/usr/share/logstash/pipeline
     ports:
@@ -145,7 +150,7 @@ services:
   postgres:
     build:
       context: ./postgres
-    #    restart: always
+    container_name: common_postgres
     environment:
       POSTGRES_PASSWORD: 123456
       POSTGRES_USER: root
@@ -166,6 +171,7 @@ services:
 
   nginx:
     image: nginx
+    container_name: common_nginx
     ports:
       - "8080:80"
     volumes:
@@ -177,6 +183,7 @@ services:
 
   promtail:
     image: grafana/promtail:latest
+    container_name: common_promtail
     volumes:
       - ${DATA_PATH_HOST}/promtail:/etc/promtail
     command: -config.file=/etc/promtail/config.yaml
@@ -185,7 +192,7 @@ services:
     image: mongo:latest
     ports:
       - "37017:27017"
-    container_name: mongo
+    container_name: common_mongo
     command: --wiredTigerCacheSizeGB 1 --auth
     volumes:
       - "${DATA_PATH_HOST}/mongodb/data/db:/data/db"
@@ -203,17 +210,17 @@ services:
 
 
   minio:
-    image: minio/minio:${MINIO_IMAGE_VERSION:-RELEASE.2024-01-11T07-46-16Z}
+    image: minio/minio:latest
     ports:
-      - "${MINIO_PORT:-10005}:9000"
+      - "${MINIO_PORT}:9000"
       - "9090:9090"
-    container_name: minio
+    container_name: common_minio
     volumes:
       - "${DATA_PATH_HOST}/mnt/data:/data"
       - "${DATA_PATH_HOST}/mnt/config:/root/.minio"
     environment:
-      MINIO_ROOT_USER: "${MINIO_ACCESS_KEY:-root}"
-      MINIO_ROOT_PASSWORD: "${MINIO_SECRET_KEY:-openIM123}"
+      MINIO_ROOT_USER: "${MINIO_ACCESS_KEY}"
+      MINIO_ROOT_PASSWORD: "${MINIO_SECRET_KEY}"
     command: minio server /data --console-address ':9090'
 
 volumes:
