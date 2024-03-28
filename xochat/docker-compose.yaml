@@ -1,0 +1,48 @@
+version: '3.5'
+# 网络配置
+# networks:
+#   backend:
+#     driver: ${NETWORKS_DRIVER}
+
+networks:
+  common:
+    external: true
+
+# 服务容器配置
+services:
+  xochat_im:
+    # wukongim底层通讯服务
+    image: zyuan909/xochat_im:latest-arm64
+    container_name: xochat_im
+    # restart: always
+    volumes:
+      - ${DATA_PATH_HOST}/tsdd_im:/root/xochat_im
+    environment:
+      XO_MODE: "debug"
+      XO_EXTERNAL_IP: "192.168.10.133"   # 提供IM对外IP；方便客户端和 IM 建立 WS 链接
+    networks:
+      - common
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:5001/health"]
+      interval: 1m30s
+      timeout: 30s
+      retries: 5
+      start_period: 30s
+    ports:
+      - 5001:5001 # http api 端口
+      - 5100:5100 # tcp端口
+      - 5200:5200 # websocket端口
+      - 5300:5300 # monitor端口
+  xochat_im_server:
+    image: zyuan909/xochat_im_server:latest-arm64
+    container_name: xochat_im_server
+    ports:
+      - "8090:8090"
+      - "6979:6979"
+    volumes:
+      - ${DATA_PATH_HOST}/tsdd_server:/home/configs
+      - ${DATA_PATH_HOST}/tsdd_server/push:/home/configs/push
+    networks:
+      - common
+    depends_on:
+      - xochat_im

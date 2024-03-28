@@ -1,0 +1,470 @@
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【Server】WuKongIM is Starting..."}
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【Server】  Using config file:  /root/wukongim/wk.yaml"}
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【Server】  Mode:  debug"}
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【Server】  Version:  v1.0.0"}
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【Server】  Git:  1711112255-6aa2ef88e2031049d92224ba56b8cba8742ea562"}
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【Server】  Go build:  go1.20.14"}
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【Server】  DataDir:  /root/wukongim/data"}
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【Server】Listening  for TCP client on tcp://0.0.0.0:5100"}
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【Server】Listening  for WS client on ws://0.0.0.0:5200"}
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【Server】Listening  for Manager Http api on http://0.0.0.0:5001"}
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【Server】Listening  for Monitor on 0.0.0.0:5300"}
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【APIServer】Server started","addr":"0.0.0.0:5001"}
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【MonitorServer】MonitorServer started","addr":"0.0.0.0:5300"}
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【MonitorServer】Monitor web address： http://localhost:5300/web"}
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【DemoServer】Demo server started","addr":"0.0.0.0:5172"}
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【DemoServer】Chat demo address： http://localhost:5172/chatdemo"}
+{"level":"info","time":"2024-03-22 22:09:19","msg":"【Server】Server is ready"}
+{"level":"info","time":"2024-03-22 22:10:52","msg":"【Server】Server is Stoping..."}
+{"level":"info","time":"2024-03-22 22:10:52","msg":"【Server】Server is exited"}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【Server】WuKongIM is Starting..."}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【Server】  Using config file:  /root/wukongim/wk.yaml"}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【Server】  Mode:  debug"}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【Server】  Version:  v1.0.0"}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【Server】  Git:  1711112255-6aa2ef88e2031049d92224ba56b8cba8742ea562"}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【Server】  Go build:  go1.20.14"}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【Server】  DataDir:  /root/wukongim/data"}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【Server】Listening  for TCP client on tcp://0.0.0.0:5100"}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【Server】Listening  for WS client on ws://0.0.0.0:5200"}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【Server】Listening  for Manager Http api on http://0.0.0.0:5001"}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【Server】Listening  for Monitor on 0.0.0.0:5300"}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【APIServer】Server started","addr":"0.0.0.0:5001"}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【MonitorServer】MonitorServer started","addr":"0.0.0.0:5300"}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【MonitorServer】Monitor web address： http://localhost:5300/web"}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【DemoServer】Demo server started","addr":"0.0.0.0:5172"}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【DemoServer】Chat demo address： http://localhost:5172/chatdemo"}
+{"level":"info","time":"2024-03-22 22:11:23","msg":"【Server】Server is ready"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【Server】WuKongIM is Starting..."}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【Server】  Using config file:  /root/wukongim/wk.yaml"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【Server】  Mode:  debug"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【Server】  Version:  v1.0.0"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【Server】  Git:  1711112255-6aa2ef88e2031049d92224ba56b8cba8742ea562"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【Server】  Go build:  go1.20.14"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【Server】  DataDir:  ~/wukongim"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【Server】Listening  for TCP client on tcp://0.0.0.0:5100"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【Server】Listening  for WS client on ws://0.0.0.0:5200"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【Server】Listening  for WSS client on wss://0.0.0.0:5210"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【Server】Listening  for Manager Http api on http://0.0.0.0:5001"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【Server】Listening  for Monitor on 0.0.0.0:5300"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【APIServer】Server started","addr":"0.0.0.0:5001"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【MonitorServer】MonitorServer started","addr":"0.0.0.0:5300"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【MonitorServer】Monitor web address： http://localhost:5300/web"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【DemoServer】Demo server started","addr":"0.0.0.0:5172"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【DemoServer】Chat demo address： http://localhost:5172/chatdemo"}
+{"level":"info","time":"2024-03-22 22:32:26","msg":"【Server】Server is ready"}
+{"level":"debug","time":"2024-03-22 22:41:02","msg":"【UserAPI】req","req":{"uid":"u_10000","token":"f3f6f93f09444e3289a0195b6a16cae2","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-22 22:41:02","msg":"【UserAPI】req","req":{"uid":"fileHelper","token":"c805cabf99444a2abcc5d12fb63008a5","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-22 22:41:02","msg":"【UserAPI】req","req":{"uid":"admin","token":"c4c4b60d9a2e4eb2859c7c02e92df62b","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-22 22:45:29","msg":"【UserAPI】req","req":{"uid":"u_10000","token":"d4b324d7f2c04a399fdd1499f44ba4ef","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-22 22:45:29","msg":"【UserAPI】req","req":{"uid":"fileHelper","token":"aa459eeb6c8a4d4188a4d6deeee828ce","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-22 22:45:29","msg":"【UserAPI】req","req":{"uid":"admin","token":"131ad9493f1e41c898377685c2c244d2","device_flag":0,"device_level":1}}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【Server】WuKongIM is Starting..."}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【Server】  Using config file:  /root/wukongim/wk.yaml"}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【Server】  Mode:  debug"}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【Server】  Version:  v1.0.0"}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【Server】  Git:  1711112255-6aa2ef88e2031049d92224ba56b8cba8742ea562"}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【Server】  Go build:  go1.20.14"}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【Server】  DataDir:  ~/wukongim"}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【Server】Listening  for TCP client on tcp://0.0.0.0:5100"}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【Server】Listening  for WS client on ws://0.0.0.0:5200"}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【Server】Listening  for WSS client on wss://0.0.0.0:5210"}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【Server】Listening  for Manager Http api on http://0.0.0.0:5001"}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【Server】Listening  for Monitor on 0.0.0.0:5300"}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【APIServer】Server started","addr":"0.0.0.0:5001"}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【MonitorServer】MonitorServer started","addr":"0.0.0.0:5300"}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【MonitorServer】Monitor web address： http://localhost:5300/web"}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【DemoServer】Demo server started","addr":"0.0.0.0:5172"}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【DemoServer】Chat demo address： http://localhost:5172/chatdemo"}
+{"level":"info","time":"2024-03-22 23:10:55","msg":"【Server】Server is ready"}
+{"level":"debug","time":"2024-03-22 23:11:02","msg":"【UserAPI】req","req":{"uid":"u_10000","token":"6efb95cf1a05426c80e987b806047fe3","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-22 23:11:02","msg":"【UserAPI】req","req":{"uid":"fileHelper","token":"4914e57ed7dc4130bc916bb10636b51f","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-22 23:11:02","msg":"【UserAPI】req","req":{"uid":"admin","token":"a284e0d0ed674e119e169e934222585f","device_flag":0,"device_level":1}}
+{"level":"info","time":"2024-03-23 13:53:13","msg":"【Server】WuKongIM is Starting..."}
+{"level":"info","time":"2024-03-23 13:53:13","msg":"【Server】  Using config file:  /root/wukongim/wk.yaml"}
+{"level":"info","time":"2024-03-23 13:53:13","msg":"【Server】  Mode:  debug"}
+{"level":"info","time":"2024-03-23 13:53:13","msg":"【Server】  Version:  v1.0.0"}
+{"level":"info","time":"2024-03-23 13:53:13","msg":"【Server】  Git:  1711112255-6aa2ef88e2031049d92224ba56b8cba8742ea562"}
+{"level":"info","time":"2024-03-23 13:53:13","msg":"【Server】  Go build:  go1.20.14"}
+{"level":"info","time":"2024-03-23 13:53:13","msg":"【Server】  DataDir:  ~/wukongim"}
+{"level":"info","time":"2024-03-23 13:53:13","msg":"【Server】Listening  for TCP client on tcp://0.0.0.0:5100"}
+{"level":"info","time":"2024-03-23 13:53:13","msg":"【Server】Listening  for WS client on ws://0.0.0.0:5200"}
+{"level":"info","time":"2024-03-23 13:53:13","msg":"【Server】Listening  for WSS client on wss://0.0.0.0:5210"}
+{"level":"info","time":"2024-03-23 13:53:13","msg":"【Server】Listening  for Manager Http api on http://0.0.0.0:5001"}
+{"level":"info","time":"2024-03-23 13:53:13","msg":"【Server】Listening  for Monitor on 0.0.0.0:5300"}
+{"level":"info","time":"2024-03-23 13:53:13","msg":"【APIServer】Server started","addr":"0.0.0.0:5001"}
+{"level":"info","time":"2024-03-23 13:53:13","msg":"【MonitorServer】MonitorServer started","addr":"0.0.0.0:5300"}
+{"level":"info","time":"2024-03-23 13:53:13","msg":"【MonitorServer】Monitor web address： http://localhost:5300/web"}
+{"level":"info","time":"2024-03-23 13:53:13","msg":"【DemoServer】Demo server started","addr":"0.0.0.0:5172"}
+{"level":"info","time":"2024-03-23 13:53:13","msg":"【DemoServer】Chat demo address： http://localhost:5172/chatdemo"}
+{"level":"info","time":"2024-03-23 13:53:13","msg":"【Server】Server is ready"}
+{"level":"debug","time":"2024-03-23 13:53:13","msg":"【UserAPI】req","req":{"uid":"u_10000","token":"2e985a93ca194fa29e8cb3b1fa2bf3e1","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 13:53:13","msg":"【UserAPI】req","req":{"uid":"fileHelper","token":"0979cab20a124c638094d7673d464fda","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 13:53:13","msg":"【UserAPI】req","req":{"uid":"admin","token":"c0177ab349664a57881344a184ab5ff2","device_flag":0,"device_level":1}}
+{"level":"info","time":"2024-03-23 14:01:13","msg":"【Server】WuKongIM is Starting..."}
+{"level":"info","time":"2024-03-23 14:01:13","msg":"【Server】  Using config file:  /root/wukongim/wk.yaml"}
+{"level":"info","time":"2024-03-23 14:01:13","msg":"【Server】  Mode:  debug"}
+{"level":"info","time":"2024-03-23 14:01:13","msg":"【Server】  Version:  v1.0.0"}
+{"level":"info","time":"2024-03-23 14:01:13","msg":"【Server】  Git:  1711112255-6aa2ef88e2031049d92224ba56b8cba8742ea562"}
+{"level":"info","time":"2024-03-23 14:01:13","msg":"【Server】  Go build:  go1.20.14"}
+{"level":"info","time":"2024-03-23 14:01:13","msg":"【Server】  DataDir:  ~/wukongim"}
+{"level":"info","time":"2024-03-23 14:01:13","msg":"【Server】Listening  for TCP client on tcp://0.0.0.0:5100"}
+{"level":"info","time":"2024-03-23 14:01:13","msg":"【Server】Listening  for WS client on ws://0.0.0.0:5200"}
+{"level":"info","time":"2024-03-23 14:01:13","msg":"【Server】Listening  for WSS client on wss://0.0.0.0:5210"}
+{"level":"info","time":"2024-03-23 14:01:13","msg":"【Server】Listening  for Manager Http api on http://0.0.0.0:5001"}
+{"level":"info","time":"2024-03-23 14:01:13","msg":"【Server】Listening  for Monitor on 0.0.0.0:5300"}
+{"level":"info","time":"2024-03-23 14:01:13","msg":"【APIServer】Server started","addr":"0.0.0.0:5001"}
+{"level":"info","time":"2024-03-23 14:01:13","msg":"【MonitorServer】MonitorServer started","addr":"0.0.0.0:5300"}
+{"level":"info","time":"2024-03-23 14:01:13","msg":"【MonitorServer】Monitor web address： http://localhost:5300/web"}
+{"level":"info","time":"2024-03-23 14:01:13","msg":"【DemoServer】Demo server started","addr":"0.0.0.0:5172"}
+{"level":"info","time":"2024-03-23 14:01:13","msg":"【DemoServer】Chat demo address： http://localhost:5172/chatdemo"}
+{"level":"info","time":"2024-03-23 14:01:13","msg":"【Server】Server is ready"}
+{"level":"debug","time":"2024-03-23 14:01:14","msg":"【UserAPI】req","req":{"uid":"u_10000","token":"b6cf0564cdca4b4e81a629ba5fdb06ce","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 14:01:14","msg":"【UserAPI】req","req":{"uid":"fileHelper","token":"116336d67bdb4cb59c5c22810c6a9f1c","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 14:01:14","msg":"【UserAPI】req","req":{"uid":"admin","token":"27da6972de164640b3d27436505f37ab","device_flag":0,"device_level":1}}
+{"level":"info","time":"2024-03-23 14:10:26","msg":"【Server】Server is Stoping..."}
+{"level":"info","time":"2024-03-23 14:10:26","msg":"【Server】Server is exited"}
+{"level":"info","time":"2024-03-23 14:22:37","msg":"【Server】WuKongIM is Starting..."}
+{"level":"info","time":"2024-03-23 14:22:37","msg":"【Server】  Using config file:  /root/wukongim/wk.yaml"}
+{"level":"info","time":"2024-03-23 14:22:37","msg":"【Server】  Mode:  debug"}
+{"level":"info","time":"2024-03-23 14:22:37","msg":"【Server】  Version:  v1.0.0"}
+{"level":"info","time":"2024-03-23 14:22:37","msg":"【Server】  Git:  1711112255-6aa2ef88e2031049d92224ba56b8cba8742ea562"}
+{"level":"info","time":"2024-03-23 14:22:37","msg":"【Server】  Go build:  go1.20.14"}
+{"level":"info","time":"2024-03-23 14:22:37","msg":"【Server】  DataDir:  ~/wukongim"}
+{"level":"info","time":"2024-03-23 14:22:37","msg":"【Server】Listening  for TCP client on tcp://0.0.0.0:5100"}
+{"level":"info","time":"2024-03-23 14:22:37","msg":"【Server】Listening  for WS client on ws://0.0.0.0:5200"}
+{"level":"info","time":"2024-03-23 14:22:37","msg":"【Server】Listening  for WSS client on wss://0.0.0.0:5210"}
+{"level":"info","time":"2024-03-23 14:22:37","msg":"【Server】Listening  for Manager Http api on http://0.0.0.0:5001"}
+{"level":"info","time":"2024-03-23 14:22:37","msg":"【Server】Listening  for Monitor on 0.0.0.0:5300"}
+{"level":"info","time":"2024-03-23 14:22:37","msg":"【APIServer】Server started","addr":"0.0.0.0:5001"}
+{"level":"info","time":"2024-03-23 14:22:37","msg":"【MonitorServer】MonitorServer started","addr":"0.0.0.0:5300"}
+{"level":"info","time":"2024-03-23 14:22:37","msg":"【MonitorServer】Monitor web address： http://localhost:5300/web"}
+{"level":"info","time":"2024-03-23 14:22:37","msg":"【DemoServer】Demo server started","addr":"0.0.0.0:5172"}
+{"level":"info","time":"2024-03-23 14:22:37","msg":"【DemoServer】Chat demo address： http://localhost:5172/chatdemo"}
+{"level":"info","time":"2024-03-23 14:22:37","msg":"【Server】Server is ready"}
+{"level":"debug","time":"2024-03-23 14:22:37","msg":"【UserAPI】req","req":{"uid":"u_10000","token":"edce6d6755da47a29ef3b8f4d1dd3eff","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 14:22:37","msg":"【UserAPI】req","req":{"uid":"fileHelper","token":"d38a0d02c1304f55a4ce02904956192c","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 14:22:37","msg":"【UserAPI】req","req":{"uid":"admin","token":"086d8bdbc7d1449998fb4a063a4281fd","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 14:23:21","msg":"【UserAPI】req","req":{"uid":"u_10000","token":"d0c2d0d186644e718141aa0a71e0f7be","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 14:23:21","msg":"【UserAPI】req","req":{"uid":"fileHelper","token":"d3e7689d552744c1a24cd7f0c093d9c5","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 14:23:21","msg":"【UserAPI】req","req":{"uid":"admin","token":"c1fdd17df5254342b986d28503ec2796","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 14:23:25","msg":"【UserAPI】req","req":{"uid":"u_10000","token":"e859867693b94fc8bd37880dba8b0eef","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 14:23:25","msg":"【UserAPI】req","req":{"uid":"fileHelper","token":"c3745f9e01fe44fabd83b9b32fd55d3c","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 14:23:25","msg":"【UserAPI】req","req":{"uid":"admin","token":"5bbb1820a70a4153bf65372e97082e98","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 14:34:09","msg":"【UserAPI】req","req":{"uid":"u_10000","token":"448b4368e225463eaaa502f1b4c628b5","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 14:34:09","msg":"【UserAPI】req","req":{"uid":"fileHelper","token":"bf22e9b76d31420785cf7a2f7cbb1ab0","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 14:34:09","msg":"【UserAPI】req","req":{"uid":"admin","token":"0a0eda8d22084db19e87d5e15392eace","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 14:51:44","msg":"【UserAPI】req","req":{"uid":"u_10000","token":"b2a25c36f89f4fbaa1a423e984925b67","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 14:51:44","msg":"【UserAPI】req","req":{"uid":"fileHelper","token":"efa4b373abe2432f91c16c954d7b2a8a","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 14:51:44","msg":"【UserAPI】req","req":{"uid":"admin","token":"8f694a7afe364a82a14258001b38aa63","device_flag":0,"device_level":1}}
+{"level":"info","time":"2024-03-23 14:52:21","msg":"【Server】Server is Stoping..."}
+{"level":"info","time":"2024-03-23 14:52:21","msg":"【Server】Server is exited"}
+{"level":"info","time":"2024-03-23 14:53:17","msg":"【Server】WuKongIM is Starting..."}
+{"level":"info","time":"2024-03-23 14:53:17","msg":"【Server】  Using config file:  /root/wukongim/wk.yaml"}
+{"level":"info","time":"2024-03-23 14:53:17","msg":"【Server】  Mode:  debug"}
+{"level":"info","time":"2024-03-23 14:53:17","msg":"【Server】  Version:  v1.0.0"}
+{"level":"info","time":"2024-03-23 14:53:17","msg":"【Server】  Git:  1711112255-6aa2ef88e2031049d92224ba56b8cba8742ea562"}
+{"level":"info","time":"2024-03-23 14:53:17","msg":"【Server】  Go build:  go1.20.14"}
+{"level":"info","time":"2024-03-23 14:53:17","msg":"【Server】  DataDir:  ~/wukongim"}
+{"level":"info","time":"2024-03-23 14:53:17","msg":"【Server】Listening  for TCP client on tcp://0.0.0.0:5100"}
+{"level":"info","time":"2024-03-23 14:53:17","msg":"【Server】Listening  for WS client on ws://0.0.0.0:5200"}
+{"level":"info","time":"2024-03-23 14:53:17","msg":"【Server】Listening  for WSS client on wss://0.0.0.0:5210"}
+{"level":"info","time":"2024-03-23 14:53:17","msg":"【Server】Listening  for Manager Http api on http://0.0.0.0:5001"}
+{"level":"info","time":"2024-03-23 14:53:17","msg":"【Server】Listening  for Monitor on 0.0.0.0:5300"}
+{"level":"info","time":"2024-03-23 14:53:17","msg":"【APIServer】Server started","addr":"0.0.0.0:5001"}
+{"level":"info","time":"2024-03-23 14:53:17","msg":"【MonitorServer】MonitorServer started","addr":"0.0.0.0:5300"}
+{"level":"info","time":"2024-03-23 14:53:17","msg":"【MonitorServer】Monitor web address： http://localhost:5300/web"}
+{"level":"info","time":"2024-03-23 14:53:17","msg":"【DemoServer】Demo server started","addr":"0.0.0.0:5172"}
+{"level":"info","time":"2024-03-23 14:53:17","msg":"【DemoServer】Chat demo address： http://localhost:5172/chatdemo"}
+{"level":"info","time":"2024-03-23 14:53:17","msg":"【Server】Server is ready"}
+{"level":"debug","time":"2024-03-23 14:54:30","msg":"【UserAPI】req","req":{"uid":"u_10000","token":"6949180e40434ee298594a4a39dd3aca","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 14:54:30","msg":"【UserAPI】req","req":{"uid":"fileHelper","token":"72726666226c4bb7ba7b4bc13f1abbda","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 14:54:30","msg":"【UserAPI】req","req":{"uid":"admin","token":"ab9571e14ad44bec9efc1abf04a49e5a","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 14:54:36","msg":"【UserAPI】req","req":{"uid":"u_10000","token":"6e6dac2cd8f54f82a1545642a493aa24","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 14:54:36","msg":"【UserAPI】req","req":{"uid":"fileHelper","token":"051241f8ed1a4e4f9edd9ed80c6efc9f","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 14:54:36","msg":"【UserAPI】req","req":{"uid":"admin","token":"332f8246ea7b452b8ceaf2707756b81d","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 14:54:44","msg":"【UserAPI】req","req":{"uid":"u_10000","token":"2f4a95e23c184b14bfef82a8c080a7a8","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 14:54:44","msg":"【UserAPI】req","req":{"uid":"fileHelper","token":"3cbeec9ccb294520847650cc4d1c82a0","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 14:54:44","msg":"【UserAPI】req","req":{"uid":"admin","token":"4083c03a8e2c473e81f60a580cb2e720","device_flag":0,"device_level":1}}
+{"level":"info","time":"2024-03-23 15:44:44","msg":"【Server】Server is Stoping..."}
+{"level":"info","time":"2024-03-23 15:44:44","msg":"【Server】Server is exited"}
+{"level":"info","time":"2024-03-23 15:47:47","msg":"【Server】WuKongIM is Starting..."}
+{"level":"info","time":"2024-03-23 15:47:47","msg":"【Server】  Using config file:  /root/wukongim/wk.yaml"}
+{"level":"info","time":"2024-03-23 15:47:47","msg":"【Server】  Mode:  debug"}
+{"level":"info","time":"2024-03-23 15:47:47","msg":"【Server】  Version:  v1.0.0"}
+{"level":"info","time":"2024-03-23 15:47:47","msg":"【Server】  Git:  1711112255-6aa2ef88e2031049d92224ba56b8cba8742ea562"}
+{"level":"info","time":"2024-03-23 15:47:47","msg":"【Server】  Go build:  go1.20.14"}
+{"level":"info","time":"2024-03-23 15:47:47","msg":"【Server】  DataDir:  ~/wukongim"}
+{"level":"info","time":"2024-03-23 15:47:47","msg":"【Server】Listening  for TCP client on tcp://0.0.0.0:5100"}
+{"level":"info","time":"2024-03-23 15:47:47","msg":"【Server】Listening  for WS client on ws://0.0.0.0:5200"}
+{"level":"info","time":"2024-03-23 15:47:47","msg":"【Server】Listening  for WSS client on wss://0.0.0.0:5210"}
+{"level":"info","time":"2024-03-23 15:47:47","msg":"【Server】Listening  for Manager Http api on http://0.0.0.0:5001"}
+{"level":"info","time":"2024-03-23 15:47:47","msg":"【Server】Listening  for Monitor on 0.0.0.0:5300"}
+{"level":"info","time":"2024-03-23 15:47:47","msg":"【APIServer】Server started","addr":"0.0.0.0:5001"}
+{"level":"info","time":"2024-03-23 15:47:47","msg":"【MonitorServer】MonitorServer started","addr":"0.0.0.0:5300"}
+{"level":"info","time":"2024-03-23 15:47:47","msg":"【MonitorServer】Monitor web address： http://localhost:5300/web"}
+{"level":"info","time":"2024-03-23 15:47:47","msg":"【DemoServer】Demo server started","addr":"0.0.0.0:5172"}
+{"level":"info","time":"2024-03-23 15:47:47","msg":"【DemoServer】Chat demo address： http://localhost:5172/chatdemo"}
+{"level":"info","time":"2024-03-23 15:47:47","msg":"【Server】Server is ready"}
+{"level":"debug","time":"2024-03-23 15:47:47","msg":"【UserAPI】req","req":{"uid":"u_10000","token":"c629217a891f40408e203ddb9b12a6d0","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 15:47:47","msg":"【UserAPI】req","req":{"uid":"fileHelper","token":"eca3c83afc414b86bf238c3501a6a389","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 15:47:47","msg":"【UserAPI】req","req":{"uid":"admin","token":"c8d8fed9f61442d1acd6399bdd3a7aaf","device_flag":0,"device_level":1}}
+{"level":"info","time":"2024-03-23 16:05:04","msg":"【Server】Server is Stoping..."}
+{"level":"info","time":"2024-03-23 16:05:04","msg":"【Server】Server is exited"}
+{"level":"info","time":"2024-03-23 16:05:31","msg":"【Server】WuKongIM is Starting..."}
+{"level":"info","time":"2024-03-23 16:05:31","msg":"【Server】  Using config file:  /root/wukongim/wk.yaml"}
+{"level":"info","time":"2024-03-23 16:05:31","msg":"【Server】  Mode:  debug"}
+{"level":"info","time":"2024-03-23 16:05:31","msg":"【Server】  Version:  v1.0.0"}
+{"level":"info","time":"2024-03-23 16:05:31","msg":"【Server】  Git:  1711112255-6aa2ef88e2031049d92224ba56b8cba8742ea562"}
+{"level":"info","time":"2024-03-23 16:05:31","msg":"【Server】  Go build:  go1.20.14"}
+{"level":"info","time":"2024-03-23 16:05:31","msg":"【Server】  DataDir:  ~/wukongim"}
+{"level":"info","time":"2024-03-23 16:05:31","msg":"【Server】Listening  for TCP client on tcp://0.0.0.0:5100"}
+{"level":"info","time":"2024-03-23 16:05:31","msg":"【Server】Listening  for WS client on ws://0.0.0.0:5200"}
+{"level":"info","time":"2024-03-23 16:05:31","msg":"【Server】Listening  for WSS client on wss://0.0.0.0:5210"}
+{"level":"info","time":"2024-03-23 16:05:31","msg":"【Server】Listening  for Manager Http api on http://0.0.0.0:5001"}
+{"level":"info","time":"2024-03-23 16:05:31","msg":"【Server】Listening  for Monitor on 0.0.0.0:5300"}
+{"level":"info","time":"2024-03-23 16:05:31","msg":"【APIServer】Server started","addr":"0.0.0.0:5001"}
+{"level":"info","time":"2024-03-23 16:05:31","msg":"【MonitorServer】MonitorServer started","addr":"0.0.0.0:5300"}
+{"level":"info","time":"2024-03-23 16:05:31","msg":"【MonitorServer】Monitor web address： http://localhost:5300/web"}
+{"level":"info","time":"2024-03-23 16:05:31","msg":"【DemoServer】Demo server started","addr":"0.0.0.0:5172"}
+{"level":"info","time":"2024-03-23 16:05:31","msg":"【DemoServer】Chat demo address： http://localhost:5172/chatdemo"}
+{"level":"info","time":"2024-03-23 16:05:31","msg":"【Server】Server is ready"}
+{"level":"debug","time":"2024-03-23 16:05:31","msg":"【UserAPI】req","req":{"uid":"u_10000","token":"76d308ecf53e4bd8a96e4a63bf8691d5","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 16:05:31","msg":"【UserAPI】req","req":{"uid":"fileHelper","token":"afbc96518cb449718e88265f8da43473","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 16:05:31","msg":"【UserAPI】req","req":{"uid":"admin","token":"2dc4d8aabd5b40bb84187b337d6b4154","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 16:14:21","msg":"【UserAPI】req","req":{"uid":"u_10000","token":"9c02e49d8c2d41c4af8c586f58394248","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 16:14:21","msg":"【UserAPI】req","req":{"uid":"fileHelper","token":"67f18e490c3f4ce08ad6e6cf54314d4e","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 16:14:21","msg":"【UserAPI】req","req":{"uid":"admin","token":"f11e199351ac467296e009f4090d1f8b","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 16:16:44","msg":"【UserAPI】req","req":{"uid":"u_10000","token":"c268ffc0624c487d8c58516965d16242","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 16:16:44","msg":"【UserAPI】req","req":{"uid":"fileHelper","token":"705dfd705d4a4020a17ae7f7afe51264","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-23 16:16:44","msg":"【UserAPI】req","req":{"uid":"admin","token":"66dfdf16593d433dafb909b5f6b7c85c","device_flag":0,"device_level":1}}
+{"level":"info","time":"2024-03-23 23:49:19","msg":"【Server】Server is Stoping..."}
+{"level":"info","time":"2024-03-23 23:49:19","msg":"【Server】Server is exited"}
+{"level":"info","time":"2024-03-28 17:59:05","msg":"【Server】xochat_im is Starting..."}
+{"level":"info","time":"2024-03-28 17:59:05","msg":"【Server】  Using config file:  /root/xochat_im/wk.yaml"}
+{"level":"info","time":"2024-03-28 17:59:05","msg":"【Server】  Mode:  debug"}
+{"level":"info","time":"2024-03-28 17:59:05","msg":"【Server】  Version:  v1.0.0"}
+{"level":"info","time":"2024-03-28 17:59:05","msg":"【Server】  Git:  1711611475-14706e00d306fb022bbb7e3e041c3c37f29e2b8a"}
+{"level":"info","time":"2024-03-28 17:59:05","msg":"【Server】  Go build:  go1.20.14"}
+{"level":"info","time":"2024-03-28 17:59:05","msg":"【Server】  DataDir:  ~/wukongim"}
+{"level":"info","time":"2024-03-28 17:59:05","msg":"【Server】Listening  for TCP client on tcp://0.0.0.0:5100"}
+{"level":"info","time":"2024-03-28 17:59:05","msg":"【Server】Listening  for WS client on ws://0.0.0.0:5200"}
+{"level":"info","time":"2024-03-28 17:59:05","msg":"【Server】Listening  for WSS client on wss://0.0.0.0:5210"}
+{"level":"info","time":"2024-03-28 17:59:05","msg":"【Server】Listening  for Manager Http api on http://0.0.0.0:5001"}
+{"level":"info","time":"2024-03-28 17:59:05","msg":"【Server】Listening  for Monitor on 0.0.0.0:5300"}
+{"level":"info","time":"2024-03-28 17:59:05","msg":"【APIServer】Server started","addr":"0.0.0.0:5001"}
+{"level":"info","time":"2024-03-28 17:59:05","msg":"【MonitorServer】MonitorServer started","addr":"0.0.0.0:5300"}
+{"level":"info","time":"2024-03-28 17:59:05","msg":"【MonitorServer】Monitor web address： http://localhost:5300/web"}
+{"level":"info","time":"2024-03-28 17:59:05","msg":"【DemoServer】Demo server started","addr":"0.0.0.0:5172"}
+{"level":"info","time":"2024-03-28 17:59:05","msg":"【DemoServer】Chat demo address： http://localhost:5172/chatdemo"}
+{"level":"info","time":"2024-03-28 17:59:05","msg":"【Server】Server is ready"}
+{"level":"debug","time":"2024-03-28 17:59:24","msg":"【UserAPI】req","req":{"uid":"u_10000","token":"e9bb2fbd4f274eddb4959c70e63f7c01","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-28 17:59:24","msg":"【UserAPI】req","req":{"uid":"fileHelper","token":"a99acab9c7584ec980910e92970f7ea1","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-28 17:59:24","msg":"【UserAPI】req","req":{"uid":"admin","token":"03f19a2fa784490885cc92cf0f458215","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-28 17:59:46","msg":"【MessageApi】发送消息内容：","msg":"{\"header\":{\"no_persist\":1,\"red_dot\":0,\"sync_once\":1},\"client_msg_no\":\"\",\"stream_no\":\"\",\"from_uid\":\"\",\"channel_id\":\"eac883812f1e44e08e21fa2bf2be2816\",\"channel_type\":1,\"expire\":0,\"subscribers\":null,\"payload\":\"eyJjbWQiOiJ0eXBpbmciLCJwYXJhbSI6eyJjaGFubmVsX2lkIjoiMzM2ZTM0NWJlYjMzNGEwOTlhYmVlMDRiYTY3ZGZhYTkiLCJjaGFubmVsX3R5cGUiOjEsImZyb21fbmFtZSI6Iueah+eUq+erryIsImZyb21fdWlkIjoiMzM2ZTM0NWJlYjMzNGEwOTlhYmVlMDRiYTY3ZGZhYTkifSwidHlwZSI6OTl9\"}"}
+{"level":"debug","time":"2024-03-28 17:59:46","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["eac883812f1e44e08e21fa2bf2be2816"]}
+{"level":"info","time":"2024-03-28 18:37:58","msg":"【Server】Server is Stoping..."}
+{"level":"info","time":"2024-03-28 18:37:58","msg":"【Server】Server is exited"}
+{"level":"info","time":"2024-03-28 18:38:48","msg":"【Server】xochat_im is Starting..."}
+{"level":"info","time":"2024-03-28 18:38:48","msg":"【Server】  Using config file:  /root/xochat_im/wk.yaml"}
+{"level":"info","time":"2024-03-28 18:38:48","msg":"【Server】  Mode:  debug"}
+{"level":"info","time":"2024-03-28 18:38:48","msg":"【Server】  Version:  v1.0.0"}
+{"level":"info","time":"2024-03-28 18:38:48","msg":"【Server】  Git:  1711611475-14706e00d306fb022bbb7e3e041c3c37f29e2b8a"}
+{"level":"info","time":"2024-03-28 18:38:48","msg":"【Server】  Go build:  go1.20.14"}
+{"level":"info","time":"2024-03-28 18:38:48","msg":"【Server】  DataDir:  ~/wukongim"}
+{"level":"info","time":"2024-03-28 18:38:48","msg":"【Server】Listening  for TCP client on tcp://0.0.0.0:5100"}
+{"level":"info","time":"2024-03-28 18:38:48","msg":"【Server】Listening  for WS client on ws://0.0.0.0:5200"}
+{"level":"info","time":"2024-03-28 18:38:48","msg":"【Server】Listening  for WSS client on wss://0.0.0.0:5210"}
+{"level":"info","time":"2024-03-28 18:38:48","msg":"【Server】Listening  for Manager Http api on http://0.0.0.0:5001"}
+{"level":"info","time":"2024-03-28 18:38:48","msg":"【Server】Listening  for Monitor on 0.0.0.0:5300"}
+{"level":"info","time":"2024-03-28 18:38:48","msg":"【APIServer】Server started","addr":"0.0.0.0:5001"}
+{"level":"info","time":"2024-03-28 18:38:48","msg":"【MonitorServer】MonitorServer started","addr":"0.0.0.0:5300"}
+{"level":"info","time":"2024-03-28 18:38:48","msg":"【MonitorServer】Monitor web address： http://localhost:5300/web"}
+{"level":"info","time":"2024-03-28 18:38:48","msg":"【DemoServer】Demo server started","addr":"0.0.0.0:5172"}
+{"level":"info","time":"2024-03-28 18:38:48","msg":"【DemoServer】Chat demo address： http://localhost:5172/chatdemo"}
+{"level":"info","time":"2024-03-28 18:38:48","msg":"【Server】Server is ready"}
+{"level":"debug","time":"2024-03-28 18:38:48","msg":"【UserAPI】req","req":{"uid":"u_10000","token":"a416ceb423314469bf5fd58ceef20795","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-28 18:38:48","msg":"【UserAPI】req","req":{"uid":"fileHelper","token":"b7f8930b648d4fae857727f6960d6638","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-28 18:38:48","msg":"【UserAPI】req","req":{"uid":"admin","token":"ea2e0ffcf86543268f5d14889fa44389","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-28 18:39:00","msg":"【Server】Auth Success","conn":"Conn[1] uid=336e345beb334a099abee04ba67dfaa9 fd={35} deviceFlag=APP deviceLevel=Slave deviceID=303007a1476a4cdebeb291fe40e22e0ead","protoVersion":4,"hasServerVersion":true}
+{"level":"debug","time":"2024-03-28 18:39:00","msg":"【Webhook】User online","uid":"336e345beb334a099abee04ba67dfaa9","deviceFlag":"APP","id":1}
+{"level":"debug","time":"2024-03-28 18:39:00","msg":"【Processor】ping","conn":"Conn[1] uid=336e345beb334a099abee04ba67dfaa9 fd={35} deviceFlag=APP deviceLevel=Slave deviceID=303007a1476a4cdebeb291fe40e22e0ead"}
+{"level":"debug","time":"2024-03-28 18:39:00","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["eac883812f1e44e08e21fa2bf2be2816"]}
+{"level":"debug","time":"2024-03-28 18:39:00","msg":"【Webhook】webhook grpc 开始请求","event":"msg.offline"}
+{"level":"debug","time":"2024-03-28 18:39:00","msg":"【Webhook】webhook grpc 开始请求","event":"msg.notify"}
+{"level":"debug","time":"2024-03-28 18:39:00","msg":"【Webhook】webhook grpc 请求结束 耗时","mill":27}
+{"level":"debug","time":"2024-03-28 18:39:00","msg":"【Webhook】webhook grpc 请求结束 耗时","mill":14}
+{"level":"debug","time":"2024-03-28 18:39:00","msg":"【segment[~/wukongim/185/topics/1-userqueue_336e345beb334a099abee04ba67dfaa9/logs/00000000000000000000.log]】当前文件位置大于文件本身大小","startPosition":0,"fileSize":0,"targetMessageSeq":1}
+{"level":"debug","time":"2024-03-28 18:39:00","msg":"【segment[~/wukongim/185/topics/1-userqueue_336e345beb334a099abee04ba67dfaa9/logs/00000000000000000000.log]】未读取到数据！"}
+{"level":"debug","time":"2024-03-28 18:39:00","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["eac883812f1e44e08e21fa2bf2be2816"]}
+{"level":"debug","time":"2024-03-28 18:39:00","msg":"【Webhook】webhook grpc 开始请求","event":"msg.offline"}
+{"level":"debug","time":"2024-03-28 18:39:00","msg":"【Webhook】webhook grpc 请求结束 耗时","mill":2}
+{"level":"debug","time":"2024-03-28 18:39:00","msg":"【Webhook】webhook grpc 开始请求","event":"msg.notify"}
+{"level":"debug","time":"2024-03-28 18:39:00","msg":"【Webhook】webhook grpc 开始请求","event":"user.onlinestatus"}
+{"level":"debug","time":"2024-03-28 18:39:00","msg":"【Webhook】webhook grpc 请求结束 耗时","mill":14}
+{"level":"debug","time":"2024-03-28 18:39:00","msg":"【MessageApi】发送消息内容：","msg":"{\"header\":{\"no_persist\":1,\"red_dot\":0,\"sync_once\":1},\"client_msg_no\":\"\",\"stream_no\":\"\",\"from_uid\":\"\",\"channel_id\":\"\",\"channel_type\":0,\"expire\":0,\"subscribers\":[\"eac883812f1e44e08e21fa2bf2be2816\",\"fileHelper\",\"u_10000\"],\"payload\":\"eyJjbWQiOiJvbmxpbmVTdGF0dXMiLCJwYXJhbSI6eyJkZXZpY2VfZmxhZyI6MCwibWFpbl9kZXZpY2VfZmxhZyI6MCwib25saW5lIjoxLCJ1aWQiOiIzMzZlMzQ1YmViMzM0YTA5OWFiZWUwNGJhNjdkZmFhOSJ9LCJ0eXBlIjo5OX0=\"}"}
+{"level":"debug","time":"2024-03-28 18:39:00","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["eac883812f1e44e08e21fa2bf2be2816","fileHelper","u_10000"]}
+{"level":"debug","time":"2024-03-28 18:39:00","msg":"【Webhook】webhook grpc 请求结束 耗时","mill":16}
+{"level":"debug","time":"2024-03-28 18:39:13","msg":"【MessageApi】发送消息内容：","msg":"{\"header\":{\"no_persist\":1,\"red_dot\":0,\"sync_once\":1},\"client_msg_no\":\"\",\"stream_no\":\"\",\"from_uid\":\"\",\"channel_id\":\"eac883812f1e44e08e21fa2bf2be2816\",\"channel_type\":1,\"expire\":0,\"subscribers\":null,\"payload\":\"eyJjbWQiOiJ0eXBpbmciLCJwYXJhbSI6eyJjaGFubmVsX2lkIjoiMzM2ZTM0NWJlYjMzNGEwOTlhYmVlMDRiYTY3ZGZhYTkiLCJjaGFubmVsX3R5cGUiOjEsImZyb21fbmFtZSI6Iueah+eUq+erryIsImZyb21fdWlkIjoiMzM2ZTM0NWJlYjMzNGEwOTlhYmVlMDRiYTY3ZGZhYTkifSwidHlwZSI6OTl9\"}"}
+{"level":"debug","time":"2024-03-28 18:39:13","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["eac883812f1e44e08e21fa2bf2be2816"]}
+{"level":"debug","time":"2024-03-28 18:39:17","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["eac883812f1e44e08e21fa2bf2be2816"]}
+{"level":"debug","time":"2024-03-28 18:39:17","msg":"【Webhook】webhook grpc 开始请求","event":"msg.offline"}
+{"level":"debug","time":"2024-03-28 18:39:17","msg":"【Webhook】webhook grpc 请求结束 耗时","mill":5}
+{"level":"debug","time":"2024-03-28 18:39:18","msg":"【Webhook】webhook grpc 开始请求","event":"msg.notify"}
+{"level":"debug","time":"2024-03-28 18:39:18","msg":"【Webhook】webhook grpc 请求结束 耗时","mill":12}
+{"level":"debug","time":"2024-03-28 18:40:03","msg":"【Processor】ping","conn":"Conn[1] uid=336e345beb334a099abee04ba67dfaa9 fd={35} deviceFlag=APP deviceLevel=Slave deviceID=303007a1476a4cdebeb291fe40e22e0ead"}
+{"level":"debug","time":"2024-03-28 18:40:18","msg":"【ReactorSub-5】connection error","error":"read: connection reset by peer"}
+{"level":"debug","time":"2024-03-28 18:40:18","msg":"【Dispatch】conn close for OnClose","conn":"Conn[1] uid=336e345beb334a099abee04ba67dfaa9 fd={35} deviceFlag=APP deviceLevel=Slave deviceID=303007a1476a4cdebeb291fe40e22e0ead"}
+{"level":"debug","time":"2024-03-28 18:40:18","msg":"【Processor】conn is close","conn":"Conn[1] uid=336e345beb334a099abee04ba67dfaa9 fd={35} deviceFlag=APP deviceLevel=Slave deviceID=303007a1476a4cdebeb291fe40e22e0ead"}
+{"level":"debug","time":"2024-03-28 18:40:18","msg":"【Webhook】User offline","uid":"336e345beb334a099abee04ba67dfaa9","deviceFlag":"APP"}
+{"level":"debug","time":"2024-03-28 18:40:18","msg":"【Webhook】webhook grpc 开始请求","event":"user.onlinestatus"}
+{"level":"debug","time":"2024-03-28 18:40:18","msg":"【MessageApi】发送消息内容：","msg":"{\"header\":{\"no_persist\":1,\"red_dot\":0,\"sync_once\":1},\"client_msg_no\":\"\",\"stream_no\":\"\",\"from_uid\":\"\",\"channel_id\":\"\",\"channel_type\":0,\"expire\":0,\"subscribers\":[\"eac883812f1e44e08e21fa2bf2be2816\",\"fileHelper\",\"u_10000\"],\"payload\":\"eyJjbWQiOiJvbmxpbmVTdGF0dXMiLCJwYXJhbSI6eyJhbGxfb2ZmbGluZSI6MSwiZGV2aWNlX2ZsYWciOjAsIm1haW5fZGV2aWNlX2ZsYWciOjAsIm9ubGluZSI6MCwidWlkIjoiMzM2ZTM0NWJlYjMzNGEwOTlhYmVlMDRiYTY3ZGZhYTkifSwidHlwZSI6OTl9\"}"}
+{"level":"debug","time":"2024-03-28 18:40:18","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["eac883812f1e44e08e21fa2bf2be2816","fileHelper","u_10000"]}
+{"level":"debug","time":"2024-03-28 18:40:18","msg":"【Webhook】webhook grpc 请求结束 耗时","mill":16}
+{"level":"debug","time":"2024-03-28 18:43:48","msg":"【ConversationManager】Save conversation","count":2}
+{"level":"info","time":"2024-03-28 19:07:35","msg":"【Server】Server is Stoping..."}
+{"level":"info","time":"2024-03-28 19:07:35","msg":"【Server】Server is exited"}
+{"level":"info","time":"2024-03-28 21:06:37","msg":"【Server】xochat_im is Starting..."}
+{"level":"info","time":"2024-03-28 21:06:37","msg":"【Server】  Using config file:  /root/xochat_im/wk.yaml"}
+{"level":"info","time":"2024-03-28 21:06:37","msg":"【Server】  Mode:  debug"}
+{"level":"info","time":"2024-03-28 21:06:37","msg":"【Server】  Version:  v1.0.0"}
+{"level":"info","time":"2024-03-28 21:06:37","msg":"【Server】  Git:  1711630705-37cb7425ea9029a21e1460cddf23b0c7e376d7fa"}
+{"level":"info","time":"2024-03-28 21:06:37","msg":"【Server】  Go build:  go1.20.14"}
+{"level":"info","time":"2024-03-28 21:06:37","msg":"【Server】  DataDir:  ~/wukongim"}
+{"level":"info","time":"2024-03-28 21:06:37","msg":"【Server】Listening  for TCP client on tcp://0.0.0.0:5100"}
+{"level":"info","time":"2024-03-28 21:06:37","msg":"【Server】Listening  for WS client on ws://0.0.0.0:5200"}
+{"level":"info","time":"2024-03-28 21:06:37","msg":"【Server】Listening  for WSS client on wss://0.0.0.0:5210"}
+{"level":"info","time":"2024-03-28 21:06:37","msg":"【Server】Listening  for Manager Http api on http://0.0.0.0:5001"}
+{"level":"info","time":"2024-03-28 21:06:37","msg":"【Server】Listening  for Monitor on 0.0.0.0:5300"}
+{"level":"info","time":"2024-03-28 21:06:37","msg":"【APIServer】Server started","addr":"0.0.0.0:5001"}
+{"level":"info","time":"2024-03-28 21:06:38","msg":"【MonitorServer】MonitorServer started","addr":"0.0.0.0:5300"}
+{"level":"info","time":"2024-03-28 21:06:38","msg":"【MonitorServer】Monitor web address： http://localhost:5300/web"}
+{"level":"info","time":"2024-03-28 21:06:38","msg":"【DemoServer】Demo server started","addr":"0.0.0.0:5172"}
+{"level":"info","time":"2024-03-28 21:06:38","msg":"【DemoServer】Chat demo address： http://localhost:5172/chatdemo"}
+{"level":"info","time":"2024-03-28 21:06:38","msg":"【Server】Server is ready"}
+{"level":"debug","time":"2024-03-28 21:06:38","msg":"【UserAPI】req","req":{"uid":"u_10000","token":"3f012f07565b4f4e8d6394553c082b55","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-28 21:06:38","msg":"【UserAPI】req","req":{"uid":"fileHelper","token":"3b282754ed78456992fcbd909dc8bbf2","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-28 21:06:38","msg":"【UserAPI】req","req":{"uid":"admin","token":"2cb307076c3245788ef7ef98203761ec","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-28 21:09:55","msg":"【Server】Auth Success","conn":"Conn[1] uid=336e345beb334a099abee04ba67dfaa9 fd={34} deviceFlag=APP deviceLevel=Slave deviceID=303007a1476a4cdebeb291fe40e22e0ead","protoVersion":4,"hasServerVersion":true}
+{"level":"debug","time":"2024-03-28 21:09:55","msg":"【Webhook】User online","uid":"336e345beb334a099abee04ba67dfaa9","deviceFlag":"APP","id":1}
+{"level":"debug","time":"2024-03-28 21:09:55","msg":"【Processor】ping","conn":"Conn[1] uid=336e345beb334a099abee04ba67dfaa9 fd={34} deviceFlag=APP deviceLevel=Slave deviceID=303007a1476a4cdebeb291fe40e22e0ead"}
+{"level":"debug","time":"2024-03-28 21:09:56","msg":"【segment[~/wukongim/185/topics/1-userqueue_336e345beb334a099abee04ba67dfaa9/logs/00000000000000000000.log]】当前文件位置大于文件本身大小","startPosition":0,"fileSize":0,"targetMessageSeq":1}
+{"level":"debug","time":"2024-03-28 21:09:56","msg":"【segment[~/wukongim/185/topics/1-userqueue_336e345beb334a099abee04ba67dfaa9/logs/00000000000000000000.log]】未读取到数据！"}
+{"level":"debug","time":"2024-03-28 21:09:56","msg":"【Webhook】webhook grpc 开始请求","event":"user.onlinestatus"}
+{"level":"debug","time":"2024-03-28 21:09:56","msg":"【MessageApi】发送消息内容：","msg":"{\"header\":{\"no_persist\":1,\"red_dot\":0,\"sync_once\":1},\"client_msg_no\":\"\",\"stream_no\":\"\",\"from_uid\":\"\",\"channel_id\":\"\",\"channel_type\":0,\"expire\":0,\"subscribers\":[\"eac883812f1e44e08e21fa2bf2be2816\",\"fileHelper\",\"u_10000\"],\"payload\":\"eyJjbWQiOiJvbmxpbmVTdGF0dXMiLCJwYXJhbSI6eyJkZXZpY2VfZmxhZyI6MCwibWFpbl9kZXZpY2VfZmxhZyI6MCwib25saW5lIjoxLCJ1aWQiOiIzMzZlMzQ1YmViMzM0YTA5OWFiZWUwNGJhNjdkZmFhOSJ9LCJ0eXBlIjo5OX0=\"}"}
+{"level":"debug","time":"2024-03-28 21:09:56","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["eac883812f1e44e08e21fa2bf2be2816","fileHelper","u_10000"]}
+{"level":"debug","time":"2024-03-28 21:09:56","msg":"【Webhook】webhook grpc 请求结束 耗时","mill":26}
+{"level":"debug","time":"2024-03-28 21:10:02","msg":"【MessageApi】发送消息内容：","msg":"{\"header\":{\"no_persist\":1,\"red_dot\":0,\"sync_once\":1},\"client_msg_no\":\"\",\"stream_no\":\"\",\"from_uid\":\"\",\"channel_id\":\"eac883812f1e44e08e21fa2bf2be2816\",\"channel_type\":1,\"expire\":0,\"subscribers\":null,\"payload\":\"eyJjbWQiOiJ0eXBpbmciLCJwYXJhbSI6eyJjaGFubmVsX2lkIjoiMzM2ZTM0NWJlYjMzNGEwOTlhYmVlMDRiYTY3ZGZhYTkiLCJjaGFubmVsX3R5cGUiOjEsImZyb21fbmFtZSI6Iueah+eUq+erryIsImZyb21fdWlkIjoiMzM2ZTM0NWJlYjMzNGEwOTlhYmVlMDRiYTY3ZGZhYTkifSwidHlwZSI6OTl9\"}"}
+{"level":"debug","time":"2024-03-28 21:10:02","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["eac883812f1e44e08e21fa2bf2be2816"]}
+{"level":"debug","time":"2024-03-28 21:10:06","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["eac883812f1e44e08e21fa2bf2be2816"]}
+{"level":"debug","time":"2024-03-28 21:10:06","msg":"【Webhook】webhook grpc 开始请求","event":"msg.offline"}
+{"level":"debug","time":"2024-03-28 21:10:06","msg":"【Webhook】webhook grpc 请求结束 耗时","mill":6}
+{"level":"debug","time":"2024-03-28 21:10:06","msg":"【Webhook】webhook grpc 开始请求","event":"msg.notify"}
+{"level":"debug","time":"2024-03-28 21:10:06","msg":"【Webhook】webhook grpc 请求结束 耗时","mill":6}
+{"level":"debug","time":"2024-03-28 21:10:58","msg":"【Processor】ping","conn":"Conn[1] uid=336e345beb334a099abee04ba67dfaa9 fd={34} deviceFlag=APP deviceLevel=Slave deviceID=303007a1476a4cdebeb291fe40e22e0ead"}
+{"level":"debug","time":"2024-03-28 21:11:38","msg":"【ConversationManager】Save conversation","count":2}
+{"level":"debug","time":"2024-03-28 21:11:55","msg":"【Processor】ping","conn":"Conn[1] uid=336e345beb334a099abee04ba67dfaa9 fd={34} deviceFlag=APP deviceLevel=Slave deviceID=303007a1476a4cdebeb291fe40e22e0ead"}
+{"level":"debug","time":"2024-03-28 21:12:33","msg":"【ReactorSub-4】connection error","error":"read: connection reset by peer"}
+{"level":"debug","time":"2024-03-28 21:12:33","msg":"【Dispatch】conn close for OnClose","conn":"Conn[1] uid=336e345beb334a099abee04ba67dfaa9 fd={34} deviceFlag=APP deviceLevel=Slave deviceID=303007a1476a4cdebeb291fe40e22e0ead"}
+{"level":"debug","time":"2024-03-28 21:12:33","msg":"【Processor】conn is close","conn":"Conn[1] uid=336e345beb334a099abee04ba67dfaa9 fd={34} deviceFlag=APP deviceLevel=Slave deviceID=303007a1476a4cdebeb291fe40e22e0ead"}
+{"level":"debug","time":"2024-03-28 21:12:33","msg":"【Webhook】User offline","uid":"336e345beb334a099abee04ba67dfaa9","deviceFlag":"APP"}
+{"level":"debug","time":"2024-03-28 21:12:34","msg":"【Webhook】webhook grpc 开始请求","event":"user.onlinestatus"}
+{"level":"debug","time":"2024-03-28 21:12:34","msg":"【MessageApi】发送消息内容：","msg":"{\"header\":{\"no_persist\":1,\"red_dot\":0,\"sync_once\":1},\"client_msg_no\":\"\",\"stream_no\":\"\",\"from_uid\":\"\",\"channel_id\":\"\",\"channel_type\":0,\"expire\":0,\"subscribers\":[\"eac883812f1e44e08e21fa2bf2be2816\",\"fileHelper\",\"u_10000\"],\"payload\":\"eyJjbWQiOiJvbmxpbmVTdGF0dXMiLCJwYXJhbSI6eyJhbGxfb2ZmbGluZSI6MSwiZGV2aWNlX2ZsYWciOjAsIm1haW5fZGV2aWNlX2ZsYWciOjAsIm9ubGluZSI6MCwidWlkIjoiMzM2ZTM0NWJlYjMzNGEwOTlhYmVlMDRiYTY3ZGZhYTkifSwidHlwZSI6OTl9\"}"}
+{"level":"debug","time":"2024-03-28 21:12:34","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["eac883812f1e44e08e21fa2bf2be2816","fileHelper","u_10000"]}
+{"level":"debug","time":"2024-03-28 21:12:34","msg":"【Webhook】webhook grpc 请求结束 耗时","mill":33}
+{"level":"debug","time":"2024-03-28 21:13:33","msg":"【Server】Auth Success","conn":"Conn[2] uid=336e345beb334a099abee04ba67dfaa9 fd={49} deviceFlag=APP deviceLevel=Slave deviceID=303007a1476a4cdebeb291fe40e22e0ead","protoVersion":4,"hasServerVersion":true}
+{"level":"debug","time":"2024-03-28 21:13:33","msg":"【Webhook】User online","uid":"336e345beb334a099abee04ba67dfaa9","deviceFlag":"APP","id":2}
+{"level":"debug","time":"2024-03-28 21:13:33","msg":"【Processor】ping","conn":"Conn[2] uid=336e345beb334a099abee04ba67dfaa9 fd={49} deviceFlag=APP deviceLevel=Slave deviceID=303007a1476a4cdebeb291fe40e22e0ead"}
+{"level":"debug","time":"2024-03-28 21:13:33","msg":"【segment[~/wukongim/185/topics/1-userqueue_336e345beb334a099abee04ba67dfaa9/logs/00000000000000000000.log]】当前文件位置大于文件本身大小","startPosition":0,"fileSize":0,"targetMessageSeq":1}
+{"level":"debug","time":"2024-03-28 21:13:33","msg":"【segment[~/wukongim/185/topics/1-userqueue_336e345beb334a099abee04ba67dfaa9/logs/00000000000000000000.log]】未读取到数据！"}
+{"level":"debug","time":"2024-03-28 21:13:34","msg":"【Webhook】webhook grpc 开始请求","event":"user.onlinestatus"}
+{"level":"debug","time":"2024-03-28 21:13:34","msg":"【MessageApi】发送消息内容：","msg":"{\"header\":{\"no_persist\":1,\"red_dot\":0,\"sync_once\":1},\"client_msg_no\":\"\",\"stream_no\":\"\",\"from_uid\":\"\",\"channel_id\":\"\",\"channel_type\":0,\"expire\":0,\"subscribers\":[\"eac883812f1e44e08e21fa2bf2be2816\",\"fileHelper\",\"u_10000\"],\"payload\":\"eyJjbWQiOiJvbmxpbmVTdGF0dXMiLCJwYXJhbSI6eyJkZXZpY2VfZmxhZyI6MCwibWFpbl9kZXZpY2VfZmxhZyI6MCwib25saW5lIjoxLCJ1aWQiOiIzMzZlMzQ1YmViMzM0YTA5OWFiZWUwNGJhNjdkZmFhOSJ9LCJ0eXBlIjo5OX0=\"}"}
+{"level":"debug","time":"2024-03-28 21:13:34","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["eac883812f1e44e08e21fa2bf2be2816","fileHelper","u_10000"]}
+{"level":"debug","time":"2024-03-28 21:13:34","msg":"【Webhook】webhook grpc 请求结束 耗时","mill":13}
+{"level":"debug","time":"2024-03-28 21:13:44","msg":"【MessageApi】发送消息内容：","msg":"{\"header\":{\"no_persist\":1,\"red_dot\":0,\"sync_once\":1},\"client_msg_no\":\"\",\"stream_no\":\"\",\"from_uid\":\"\",\"channel_id\":\"eac883812f1e44e08e21fa2bf2be2816\",\"channel_type\":1,\"expire\":0,\"subscribers\":null,\"payload\":\"eyJjbWQiOiJ0eXBpbmciLCJwYXJhbSI6eyJjaGFubmVsX2lkIjoiMzM2ZTM0NWJlYjMzNGEwOTlhYmVlMDRiYTY3ZGZhYTkiLCJjaGFubmVsX3R5cGUiOjEsImZyb21fbmFtZSI6Iueah+eUq+erryIsImZyb21fdWlkIjoiMzM2ZTM0NWJlYjMzNGEwOTlhYmVlMDRiYTY3ZGZhYTkifSwidHlwZSI6OTl9\"}"}
+{"level":"debug","time":"2024-03-28 21:13:44","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["eac883812f1e44e08e21fa2bf2be2816"]}
+{"level":"debug","time":"2024-03-28 21:13:45","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["eac883812f1e44e08e21fa2bf2be2816"]}
+{"level":"debug","time":"2024-03-28 21:13:45","msg":"【Webhook】webhook grpc 开始请求","event":"msg.offline"}
+{"level":"debug","time":"2024-03-28 21:13:45","msg":"【Webhook】webhook grpc 请求结束 耗时","mill":9}
+{"level":"debug","time":"2024-03-28 21:13:46","msg":"【Webhook】webhook grpc 开始请求","event":"msg.notify"}
+{"level":"debug","time":"2024-03-28 21:13:46","msg":"【Webhook】webhook grpc 请求结束 耗时","mill":13}
+{"level":"debug","time":"2024-03-28 21:13:48","msg":"【MessageApi】发送消息内容：","msg":"{\"header\":{\"no_persist\":1,\"red_dot\":0,\"sync_once\":1},\"client_msg_no\":\"\",\"stream_no\":\"\",\"from_uid\":\"\",\"channel_id\":\"eac883812f1e44e08e21fa2bf2be2816\",\"channel_type\":1,\"expire\":0,\"subscribers\":null,\"payload\":\"eyJjbWQiOiJ0eXBpbmciLCJwYXJhbSI6eyJjaGFubmVsX2lkIjoiMzM2ZTM0NWJlYjMzNGEwOTlhYmVlMDRiYTY3ZGZhYTkiLCJjaGFubmVsX3R5cGUiOjEsImZyb21fbmFtZSI6Iueah+eUq+erryIsImZyb21fdWlkIjoiMzM2ZTM0NWJlYjMzNGEwOTlhYmVlMDRiYTY3ZGZhYTkifSwidHlwZSI6OTl9\"}"}
+{"level":"debug","time":"2024-03-28 21:13:48","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["eac883812f1e44e08e21fa2bf2be2816"]}
+{"level":"debug","time":"2024-03-28 21:13:49","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["eac883812f1e44e08e21fa2bf2be2816"]}
+{"level":"debug","time":"2024-03-28 21:13:49","msg":"【Webhook】webhook grpc 开始请求","event":"msg.offline"}
+{"level":"debug","time":"2024-03-28 21:13:49","msg":"【Webhook】webhook grpc 请求结束 耗时","mill":6}
+{"level":"debug","time":"2024-03-28 21:13:50","msg":"【Webhook】webhook grpc 开始请求","event":"msg.notify"}
+{"level":"debug","time":"2024-03-28 21:13:50","msg":"【Webhook】webhook grpc 请求结束 耗时","mill":14}
+{"level":"debug","time":"2024-03-28 21:13:51","msg":"【MessageApi】发送消息内容：","msg":"{\"header\":{\"no_persist\":1,\"red_dot\":0,\"sync_once\":1},\"client_msg_no\":\"\",\"stream_no\":\"\",\"from_uid\":\"\",\"channel_id\":\"eac883812f1e44e08e21fa2bf2be2816\",\"channel_type\":1,\"expire\":0,\"subscribers\":null,\"payload\":\"eyJjbWQiOiJ0eXBpbmciLCJwYXJhbSI6eyJjaGFubmVsX2lkIjoiMzM2ZTM0NWJlYjMzNGEwOTlhYmVlMDRiYTY3ZGZhYTkiLCJjaGFubmVsX3R5cGUiOjEsImZyb21fbmFtZSI6Iueah+eUq+erryIsImZyb21fdWlkIjoiMzM2ZTM0NWJlYjMzNGEwOTlhYmVlMDRiYTY3ZGZhYTkifSwidHlwZSI6OTl9\"}"}
+{"level":"debug","time":"2024-03-28 21:13:51","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["eac883812f1e44e08e21fa2bf2be2816"]}
+{"level":"debug","time":"2024-03-28 21:13:52","msg":"【ReactorSub-9】connection error","error":"read: connection reset by peer"}
+{"level":"debug","time":"2024-03-28 21:13:52","msg":"【Dispatch】conn close for OnClose","conn":"Conn[2] uid=336e345beb334a099abee04ba67dfaa9 fd={49} deviceFlag=APP deviceLevel=Slave deviceID=303007a1476a4cdebeb291fe40e22e0ead"}
+{"level":"debug","time":"2024-03-28 21:13:52","msg":"【Processor】conn is close","conn":"Conn[2] uid=336e345beb334a099abee04ba67dfaa9 fd={49} deviceFlag=APP deviceLevel=Slave deviceID=303007a1476a4cdebeb291fe40e22e0ead"}
+{"level":"debug","time":"2024-03-28 21:13:52","msg":"【Webhook】User offline","uid":"336e345beb334a099abee04ba67dfaa9","deviceFlag":"APP"}
+{"level":"debug","time":"2024-03-28 21:13:53","msg":"【Server】Auth Success","conn":"Conn[3] uid=336e345beb334a099abee04ba67dfaa9 fd={49} deviceFlag=APP deviceLevel=Slave deviceID=303007a1476a4cdebeb291fe40e22e0ead","protoVersion":4,"hasServerVersion":true}
+{"level":"debug","time":"2024-03-28 21:13:53","msg":"【Webhook】User online","uid":"336e345beb334a099abee04ba67dfaa9","deviceFlag":"APP","id":3}
+{"level":"debug","time":"2024-03-28 21:13:53","msg":"【Processor】ping","conn":"Conn[3] uid=336e345beb334a099abee04ba67dfaa9 fd={49} deviceFlag=APP deviceLevel=Slave deviceID=303007a1476a4cdebeb291fe40e22e0ead"}
+{"level":"debug","time":"2024-03-28 21:13:53","msg":"【segment[~/wukongim/185/topics/1-userqueue_336e345beb334a099abee04ba67dfaa9/logs/00000000000000000000.log]】当前文件位置大于文件本身大小","startPosition":0,"fileSize":0,"targetMessageSeq":1}
+{"level":"debug","time":"2024-03-28 21:13:53","msg":"【segment[~/wukongim/185/topics/1-userqueue_336e345beb334a099abee04ba67dfaa9/logs/00000000000000000000.log]】未读取到数据！"}
+{"level":"debug","time":"2024-03-28 21:13:54","msg":"【Webhook】webhook grpc 开始请求","event":"user.onlinestatus"}
+{"level":"debug","time":"2024-03-28 21:13:54","msg":"【MessageApi】发送消息内容：","msg":"{\"header\":{\"no_persist\":1,\"red_dot\":0,\"sync_once\":1},\"client_msg_no\":\"\",\"stream_no\":\"\",\"from_uid\":\"\",\"channel_id\":\"\",\"channel_type\":0,\"expire\":0,\"subscribers\":[\"eac883812f1e44e08e21fa2bf2be2816\",\"fileHelper\",\"u_10000\"],\"payload\":\"eyJjbWQiOiJvbmxpbmVTdGF0dXMiLCJwYXJhbSI6eyJkZXZpY2VfZmxhZyI6MCwibWFpbl9kZXZpY2VfZmxhZyI6MCwib25saW5lIjowLCJ1aWQiOiIzMzZlMzQ1YmViMzM0YTA5OWFiZWUwNGJhNjdkZmFhOSJ9LCJ0eXBlIjo5OX0=\"}"}
+{"level":"debug","time":"2024-03-28 21:13:54","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["eac883812f1e44e08e21fa2bf2be2816","fileHelper","u_10000"]}
+{"level":"debug","time":"2024-03-28 21:13:54","msg":"【MessageApi】发送消息内容：","msg":"{\"header\":{\"no_persist\":1,\"red_dot\":0,\"sync_once\":1},\"client_msg_no\":\"\",\"stream_no\":\"\",\"from_uid\":\"\",\"channel_id\":\"\",\"channel_type\":0,\"expire\":0,\"subscribers\":[\"eac883812f1e44e08e21fa2bf2be2816\",\"fileHelper\",\"u_10000\"],\"payload\":\"eyJjbWQiOiJvbmxpbmVTdGF0dXMiLCJwYXJhbSI6eyJkZXZpY2VfZmxhZyI6MCwibWFpbl9kZXZpY2VfZmxhZyI6MCwib25saW5lIjoxLCJ1aWQiOiIzMzZlMzQ1YmViMzM0YTA5OWFiZWUwNGJhNjdkZmFhOSJ9LCJ0eXBlIjo5OX0=\"}"}
+{"level":"debug","time":"2024-03-28 21:13:54","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["eac883812f1e44e08e21fa2bf2be2816","fileHelper","u_10000"]}
+{"level":"debug","time":"2024-03-28 21:13:54","msg":"【Webhook】webhook grpc 请求结束 耗时","mill":18}
+{"level":"debug","time":"2024-03-28 21:13:54","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["eac883812f1e44e08e21fa2bf2be2816"]}
+{"level":"debug","time":"2024-03-28 21:13:54","msg":"【Webhook】webhook grpc 开始请求","event":"msg.offline"}
+{"level":"debug","time":"2024-03-28 21:13:54","msg":"【Webhook】webhook grpc 请求结束 耗时","mill":8}
+{"level":"debug","time":"2024-03-28 21:13:55","msg":"【Webhook】webhook grpc 开始请求","event":"msg.notify"}
+{"level":"debug","time":"2024-03-28 21:13:55","msg":"【Webhook】webhook grpc 请求结束 耗时","mill":11}
+{"level":"debug","time":"2024-03-28 21:13:57","msg":"【MessageApi】发送消息内容：","msg":"{\"header\":{\"no_persist\":1,\"red_dot\":0,\"sync_once\":1},\"client_msg_no\":\"\",\"stream_no\":\"\",\"from_uid\":\"\",\"channel_id\":\"eac883812f1e44e08e21fa2bf2be2816\",\"channel_type\":1,\"expire\":0,\"subscribers\":null,\"payload\":\"eyJjbWQiOiJ0eXBpbmciLCJwYXJhbSI6eyJjaGFubmVsX2lkIjoiMzM2ZTM0NWJlYjMzNGEwOTlhYmVlMDRiYTY3ZGZhYTkiLCJjaGFubmVsX3R5cGUiOjEsImZyb21fbmFtZSI6Iueah+eUq+erryIsImZyb21fdWlkIjoiMzM2ZTM0NWJlYjMzNGEwOTlhYmVlMDRiYTY3ZGZhYTkifSwidHlwZSI6OTl9\"}"}
+{"level":"debug","time":"2024-03-28 21:13:57","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["eac883812f1e44e08e21fa2bf2be2816"]}
+{"level":"debug","time":"2024-03-28 21:14:01","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["eac883812f1e44e08e21fa2bf2be2816"]}
+{"level":"debug","time":"2024-03-28 21:14:01","msg":"【Webhook】webhook grpc 开始请求","event":"msg.offline"}
+{"level":"debug","time":"2024-03-28 21:14:01","msg":"【Webhook】webhook grpc 请求结束 耗时","mill":8}
+{"level":"debug","time":"2024-03-28 21:14:02","msg":"【Webhook】webhook grpc 开始请求","event":"msg.notify"}
+{"level":"debug","time":"2024-03-28 21:14:02","msg":"【Webhook】webhook grpc 请求结束 耗时","mill":5}
+{"level":"debug","time":"2024-03-28 21:14:04","msg":"【MessageApi】发送消息内容：","msg":"{\"header\":{\"no_persist\":1,\"red_dot\":0,\"sync_once\":1},\"client_msg_no\":\"\",\"stream_no\":\"\",\"from_uid\":\"\",\"channel_id\":\"eac883812f1e44e08e21fa2bf2be2816\",\"channel_type\":1,\"expire\":0,\"subscribers\":null,\"payload\":\"eyJjbWQiOiJ0eXBpbmciLCJwYXJhbSI6eyJjaGFubmVsX2lkIjoiMzM2ZTM0NWJlYjMzNGEwOTlhYmVlMDRiYTY3ZGZhYTkiLCJjaGFubmVsX3R5cGUiOjEsImZyb21fbmFtZSI6Iueah+eUq+erryIsImZyb21fdWlkIjoiMzM2ZTM0NWJlYjMzNGEwOTlhYmVlMDRiYTY3ZGZhYTkifSwidHlwZSI6OTl9\"}"}
+{"level":"debug","time":"2024-03-28 21:14:04","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["eac883812f1e44e08e21fa2bf2be2816"]}
+{"level":"debug","time":"2024-03-28 21:14:07","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["eac883812f1e44e08e21fa2bf2be2816"]}
+{"level":"debug","time":"2024-03-28 21:14:07","msg":"【Webhook】webhook grpc 开始请求","event":"msg.offline"}
+{"level":"debug","time":"2024-03-28 21:14:07","msg":"【Webhook】webhook grpc 请求结束 耗时","mill":9}
+{"level":"debug","time":"2024-03-28 21:14:08","msg":"【Webhook】webhook grpc 开始请求","event":"msg.notify"}
+{"level":"debug","time":"2024-03-28 21:14:08","msg":"【Webhook】webhook grpc 请求结束 耗时","mill":13}
+{"level":"debug","time":"2024-03-28 21:14:11","msg":"【MessageApi】发送消息内容：","msg":"{\"header\":{\"no_persist\":1,\"red_dot\":0,\"sync_once\":1},\"client_msg_no\":\"\",\"stream_no\":\"\",\"from_uid\":\"\",\"channel_id\":\"eac883812f1e44e08e21fa2bf2be2816\",\"channel_type\":1,\"expire\":0,\"subscribers\":null,\"payload\":\"eyJjbWQiOiJ0eXBpbmciLCJwYXJhbSI6eyJjaGFubmVsX2lkIjoiMzM2ZTM0NWJlYjMzNGEwOTlhYmVlMDRiYTY3ZGZhYTkiLCJjaGFubmVsX3R5cGUiOjEsImZyb21fbmFtZSI6Iueah+eUq+erryIsImZyb21fdWlkIjoiMzM2ZTM0NWJlYjMzNGEwOTlhYmVlMDRiYTY3ZGZhYTkifSwidHlwZSI6OTl9\"}"}
+{"level":"debug","time":"2024-03-28 21:14:11","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["eac883812f1e44e08e21fa2bf2be2816"]}
+{"level":"debug","time":"2024-03-28 21:14:16","msg":"【MessageApi】发送消息内容：","msg":"{\"header\":{\"no_persist\":1,\"red_dot\":0,\"sync_once\":1},\"client_msg_no\":\"\",\"stream_no\":\"\",\"from_uid\":\"\",\"channel_id\":\"eac883812f1e44e08e21fa2bf2be2816\",\"channel_type\":1,\"expire\":0,\"subscribers\":null,\"payload\":\"eyJjbWQiOiJ0eXBpbmciLCJwYXJhbSI6eyJjaGFubmVsX2lkIjoiMzM2ZTM0NWJlYjMzNGEwOTlhYmVlMDRiYTY3ZGZhYTkiLCJjaGFubmVsX3R5cGUiOjEsImZyb21fbmFtZSI6Iueah+eUq+erryIsImZyb21fdWlkIjoiMzM2ZTM0NWJlYjMzNGEwOTlhYmVlMDRiYTY3ZGZhYTkifSwidHlwZSI6OTl9\"}"}
+{"level":"debug","time":"2024-03-28 21:14:16","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["eac883812f1e44e08e21fa2bf2be2816"]}
+{"level":"debug","time":"2024-03-28 21:14:19","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["eac883812f1e44e08e21fa2bf2be2816"]}
+{"level":"debug","time":"2024-03-28 21:14:19","msg":"【Webhook】webhook grpc 开始请求","event":"msg.offline"}
+{"level":"debug","time":"2024-03-28 21:14:19","msg":"【Webhook】webhook grpc 请求结束 耗时","mill":7}
+{"level":"debug","time":"2024-03-28 21:14:19","msg":"【Webhook】webhook grpc 开始请求","event":"msg.notify"}
+{"level":"debug","time":"2024-03-28 21:14:19","msg":"【Webhook】webhook grpc 请求结束 耗时","mill":22}
+{"level":"debug","time":"2024-03-28 21:14:20","msg":"【MessageApi】发送消息内容：","msg":"{\"header\":{\"no_persist\":1,\"red_dot\":0,\"sync_once\":1},\"client_msg_no\":\"\",\"stream_no\":\"\",\"from_uid\":\"\",\"channel_id\":\"eac883812f1e44e08e21fa2bf2be2816\",\"channel_type\":1,\"expire\":0,\"subscribers\":null,\"payload\":\"eyJjbWQiOiJ0eXBpbmciLCJwYXJhbSI6eyJjaGFubmVsX2lkIjoiMzM2ZTM0NWJlYjMzNGEwOTlhYmVlMDRiYTY3ZGZhYTkiLCJjaGFubmVsX3R5cGUiOjEsImZyb21fbmFtZSI6Iueah+eUq+erryIsImZyb21fdWlkIjoiMzM2ZTM0NWJlYjMzNGEwOTlhYmVlMDRiYTY3ZGZhYTkifSwidHlwZSI6OTl9\"}"}
+{"level":"debug","time":"2024-03-28 21:14:20","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["eac883812f1e44e08e21fa2bf2be2816"]}
+{"level":"debug","time":"2024-03-28 21:14:25","msg":"【MessageApi】发送消息内容：","msg":"{\"header\":{\"no_persist\":1,\"red_dot\":0,\"sync_once\":1},\"client_msg_no\":\"\",\"stream_no\":\"\",\"from_uid\":\"\",\"channel_id\":\"eac883812f1e44e08e21fa2bf2be2816\",\"channel_type\":1,\"expire\":0,\"subscribers\":null,\"payload\":\"eyJjbWQiOiJ0eXBpbmciLCJwYXJhbSI6eyJjaGFubmVsX2lkIjoiMzM2ZTM0NWJlYjMzNGEwOTlhYmVlMDRiYTY3ZGZhYTkiLCJjaGFubmVsX3R5cGUiOjEsImZyb21fbmFtZSI6Iueah+eUq+erryIsImZyb21fdWlkIjoiMzM2ZTM0NWJlYjMzNGEwOTlhYmVlMDRiYTY3ZGZhYTkifSwidHlwZSI6OTl9\"}"}
+{"level":"debug","time":"2024-03-28 21:14:25","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["eac883812f1e44e08e21fa2bf2be2816"]}
+{"level":"debug","time":"2024-03-28 21:14:26","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["eac883812f1e44e08e21fa2bf2be2816"]}
+{"level":"debug","time":"2024-03-28 21:14:26","msg":"【Webhook】webhook grpc 开始请求","event":"msg.offline"}
+{"level":"debug","time":"2024-03-28 21:14:26","msg":"【Webhook】webhook grpc 请求结束 耗时","mill":8}
+{"level":"debug","time":"2024-03-28 21:14:26","msg":"【Webhook】webhook grpc 开始请求","event":"msg.notify"}
+{"level":"debug","time":"2024-03-28 21:14:26","msg":"【Webhook】webhook grpc 请求结束 耗时","mill":8}
+{"level":"debug","time":"2024-03-28 21:14:56","msg":"【Processor】ping","conn":"Conn[3] uid=336e345beb334a099abee04ba67dfaa9 fd={49} deviceFlag=APP deviceLevel=Slave deviceID=303007a1476a4cdebeb291fe40e22e0ead"}
+{"level":"debug","time":"2024-03-28 21:15:53","msg":"【Processor】ping","conn":"Conn[3] uid=336e345beb334a099abee04ba67dfaa9 fd={49} deviceFlag=APP deviceLevel=Slave deviceID=303007a1476a4cdebeb291fe40e22e0ead"}
+{"level":"debug","time":"2024-03-28 21:15:58","msg":"【MessageApi】发送消息内容：","msg":"{\"header\":{\"no_persist\":1,\"red_dot\":0,\"sync_once\":1},\"client_msg_no\":\"\",\"stream_no\":\"\",\"from_uid\":\"\",\"channel_id\":\"336e345beb334a099abee04ba67dfaa9\",\"channel_type\":1,\"expire\":0,\"subscribers\":null,\"payload\":\"eyJjbWQiOiJ1bnJlYWRDbGVhciIsInBhcmFtIjp7ImNoYW5uZWxfaWQiOiJlYWM4ODM4MTJmMWU0NGUwOGUyMWZhMmJmMmJlMjgxNiIsImNoYW5uZWxfdHlwZSI6MSwidW5yZWFkIjowfSwidHlwZSI6OTl9\"}"}
+{"level":"debug","time":"2024-03-28 21:15:58","msg":"【DeliveryManager】消息投递","subscriber":"336e345beb334a099abee04ba67dfaa9","recvConns":1}
+{"level":"debug","time":"2024-03-28 21:15:58","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["336e345beb334a099abee04ba67dfaa9"]}
+{"level":"debug","time":"2024-03-28 21:15:58","msg":"【MessageApi】发送消息内容：","msg":"{\"header\":{\"no_persist\":1,\"red_dot\":0,\"sync_once\":1},\"client_msg_no\":\"\",\"stream_no\":\"\",\"from_uid\":\"\",\"channel_id\":\"336e345beb334a099abee04ba67dfaa9\",\"channel_type\":1,\"expire\":0,\"subscribers\":null,\"payload\":\"eyJjbWQiOiJzeW5jQ29udmVyc2F0aW9uRXh0cmEiLCJ0eXBlIjo5OX0=\"}"}
+{"level":"debug","time":"2024-03-28 21:15:58","msg":"【DeliveryManager】消息投递","subscriber":"336e345beb334a099abee04ba67dfaa9","recvConns":1}
+{"level":"debug","time":"2024-03-28 21:15:58","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["336e345beb334a099abee04ba67dfaa9"]}
+{"level":"debug","time":"2024-03-28 21:16:38","msg":"【ConversationManager】Save conversation","count":2}
+{"level":"debug","time":"2024-03-28 21:16:55","msg":"【Processor】ping","conn":"Conn[3] uid=336e345beb334a099abee04ba67dfaa9 fd={49} deviceFlag=APP deviceLevel=Slave deviceID=303007a1476a4cdebeb291fe40e22e0ead"}
+{"level":"debug","time":"2024-03-28 21:17:00","msg":"【ReactorSub-9】connection error","error":"read: connection reset by peer"}
+{"level":"debug","time":"2024-03-28 21:17:00","msg":"【Dispatch】conn close for OnClose","conn":"Conn[3] uid=336e345beb334a099abee04ba67dfaa9 fd={49} deviceFlag=APP deviceLevel=Slave deviceID=303007a1476a4cdebeb291fe40e22e0ead"}
+{"level":"debug","time":"2024-03-28 21:17:00","msg":"【Processor】conn is close","conn":"Conn[3] uid=336e345beb334a099abee04ba67dfaa9 fd={49} deviceFlag=APP deviceLevel=Slave deviceID=303007a1476a4cdebeb291fe40e22e0ead"}
+{"level":"debug","time":"2024-03-28 21:17:00","msg":"【Webhook】User offline","uid":"336e345beb334a099abee04ba67dfaa9","deviceFlag":"APP"}
+{"level":"debug","time":"2024-03-28 21:17:00","msg":"【Webhook】webhook grpc 开始请求","event":"user.onlinestatus"}
+{"level":"debug","time":"2024-03-28 21:17:00","msg":"【MessageApi】发送消息内容：","msg":"{\"header\":{\"no_persist\":1,\"red_dot\":0,\"sync_once\":1},\"client_msg_no\":\"\",\"stream_no\":\"\",\"from_uid\":\"\",\"channel_id\":\"\",\"channel_type\":0,\"expire\":0,\"subscribers\":[\"eac883812f1e44e08e21fa2bf2be2816\",\"fileHelper\",\"u_10000\"],\"payload\":\"eyJjbWQiOiJvbmxpbmVTdGF0dXMiLCJwYXJhbSI6eyJhbGxfb2ZmbGluZSI6MSwiZGV2aWNlX2ZsYWciOjAsIm1haW5fZGV2aWNlX2ZsYWciOjAsIm9ubGluZSI6MCwidWlkIjoiMzM2ZTM0NWJlYjMzNGEwOTlhYmVlMDRiYTY3ZGZhYTkifSwidHlwZSI6OTl9\"}"}
+{"level":"debug","time":"2024-03-28 21:17:00","msg":"【DeliveryManager】Offline subscribers","offlineSubscribers":["eac883812f1e44e08e21fa2bf2be2816","fileHelper","u_10000"]}
+{"level":"debug","time":"2024-03-28 21:17:00","msg":"【Webhook】webhook grpc 请求结束 耗时","mill":25}
+{"level":"info","time":"2024-03-28 21:18:41","msg":"【Server】Server is Stoping..."}
+{"level":"info","time":"2024-03-28 21:18:41","msg":"【Server】Server is exited"}
