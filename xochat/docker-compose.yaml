@@ -16,7 +16,7 @@ services:
     container_name: xochat_im
     # restart: always
     volumes:
-      - ${DATA_PATH_HOST}/tsdd_im:/root/xochat_im
+      - ${DATA_PATH_HOST}/xochat_im:/root/xochat_im
     environment:
       XO_MODE: "debug"
       XO_EXTERNAL_IP: "192.168.10.133"   # 提供IM对外IP；方便客户端和 IM 建立 WS 链接
@@ -40,8 +40,8 @@ services:
       - "8090:8090"
       - "6979:6979"
     volumes:
-      - ${DATA_PATH_HOST}/tsdd_server:/home/configs
-      - ${DATA_PATH_HOST}/tsdd_server/push:/home/configs/push
+      - ${DATA_PATH_HOST}/xochat_im_server:/home/configs
+      - ${DATA_PATH_HOST}/xochat_im_server/push:/home/configs/push
     networks:
       - common
     depends_on:
