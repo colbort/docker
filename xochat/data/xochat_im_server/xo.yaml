@@ -3,8 +3,8 @@ mode: "debug" #   运行模式 debug or release
 adminpwd: "123456" # 管理员密码
 addr: ":8090" # api监听地址
 grpcAddr: "0.0.0.0:6979" # webhook grpc监听地址 给悟空IM提供的
-appName: "唐僧叨叨" # 项目名称
-rootDir: "tsdddata" # 数据根目录
+appName: "XOCHAT" # 项目名称
+rootDir: "data" # 数据根目录
 messageSaveAcrossDevice: true # 消息是否跨设备保存（换设备登录消息是否还能同步到老消息）
 welcomeMessage: "欢迎使用{{appName}}" # 欢迎消息
 phoneSearchOff: true # 关闭手机号搜索用户功能
@@ -19,8 +19,11 @@ wukongIM:
 
 ##################### db ####################
 db:
-  initDb: true
+  migration: true
   mysqlAddr: "root:123456@tcp(common_mysql:3306)/xochat?charset=utf8mb4&parseTime=true" # mysql连接地址
+  onns: 100
+  mysqlMaxIdleConns: 10
+  mysqlConnMaxLifetime: 1000 * 60 * 60 * 4 # mysql 默认超时时间为 60*60*8=28800 SetConnMaxLifetime设置为小于数据库超时时间即可
   redisAddr: "common_redis:6379" # redis地址
   redisPass: "12345678" # redis密码
   asynctaskRedisAddr: "common_redis:6379" # 异步任务的redis地址 不写默认为RedisAddr的地址
