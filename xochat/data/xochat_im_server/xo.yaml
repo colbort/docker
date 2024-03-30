@@ -29,9 +29,9 @@ db:
   asynctaskRedisAddr: "common_redis:6379" # 异步任务的redis地址 不写默认为RedisAddr的地址
 
 ##################### 外网配置 ####################
-#external:
-#  ip: "" # 外网ip
-#  baseURL: "" # 外网访问地址 例如 http://10.2.3.1:8090
+external:
+  ip: "" # 外网ip
+  baseURL: "192.168.10.133" # 外网访问地址 例如 http://10.2.3.1:8090
 #  webLoginURL: "" # web im的登录地址 例如 https://web.tangsengdaodao.com
 
 ##################### 日志配置 ####################

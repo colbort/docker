@@ -8,7 +8,7 @@ tokenAuthOn: false # 是否开启token验证 默认为false，如果不开启任
 managerUID: "" # 管理员UID  默认为 ____manager
 managerToken: "" # 管理员token 如果此字段有值，则API接口需要在请求头中添加token字段，值为此字段的值
 wsAddr: "ws://0.0.0.0:5200" # websocket ws 监听地址
-wssAddr: "wss://0.0.0.0:5210" # websocket wss 监听地址 如果打开则需要进行 wssConfig相关的证书配置
+# wssAddr: "wss://0.0.0.0:5210" # websocket wss 监听地址 如果打开则需要进行 wssConfig相关的证书配置
 whitelistOffOfPerson: true # 是否关闭个人白名单 默认为true表示关闭个人白名单的验证
 external: # 公网配置
 ip: "" # 节点外网IP，客户端能够访问到的IP地址，如果客户端是内网使用，这里也可以填写内网IP
