@@ -14,3 +14,5 @@ harbor/data/
 harbor/log/
 jenkins/jenkins_home/
 portainer/data/
+xochat/data/xochat_im/data/
+xochat/data/xochat_im/logs/
