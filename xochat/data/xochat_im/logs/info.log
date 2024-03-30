@@ -468,3 +468,48 @@
 {"level":"debug","time":"2024-03-28 21:17:00","msg":"【Webhook】webhook grpc 请求结束 耗时","mill":25}
 {"level":"info","time":"2024-03-28 21:18:41","msg":"【Server】Server is Stoping..."}
 {"level":"info","time":"2024-03-28 21:18:41","msg":"【Server】Server is exited"}
+{"level":"info","time":"2024-03-30 10:19:42","msg":"【Server】xochat_im is Starting..."}
+{"level":"info","time":"2024-03-30 10:19:42","msg":"【Server】  Using config file:  /root/xochat_im/xo.yaml"}
+{"level":"info","time":"2024-03-30 10:19:42","msg":"【Server】  Mode:  debug"}
+{"level":"info","time":"2024-03-30 10:19:42","msg":"【Server】  Version:  v1.0.0"}
+{"level":"info","time":"2024-03-30 10:19:42","msg":"【Server】  Git:  1711637708-02913faf3c9eb4f482ef9f8655fc4ca13ab32a60"}
+{"level":"info","time":"2024-03-30 10:19:42","msg":"【Server】  Go build:  go1.20.14"}
+{"level":"info","time":"2024-03-30 10:19:42","msg":"【Server】  DataDir:  ~/wukongim"}
+{"level":"info","time":"2024-03-30 10:19:42","msg":"【Server】Listening  for TCP client on tcp://0.0.0.0:5100"}
+{"level":"info","time":"2024-03-30 10:19:42","msg":"【Server】Listening  for WS client on ws://0.0.0.0:5200"}
+{"level":"info","time":"2024-03-30 10:19:42","msg":"【Server】Listening  for WSS client on wss://0.0.0.0:5210"}
+{"level":"info","time":"2024-03-30 10:19:42","msg":"【Server】Listening  for Manager Http api on http://0.0.0.0:5001"}
+{"level":"info","time":"2024-03-30 10:19:42","msg":"【Server】Listening  for Monitor on 0.0.0.0:5300"}
+{"level":"info","time":"2024-03-30 10:19:42","msg":"【APIServer】Server started","addr":"0.0.0.0:5001"}
+{"level":"info","time":"2024-03-30 10:19:42","msg":"【MonitorServer】MonitorServer started","addr":"0.0.0.0:5300"}
+{"level":"info","time":"2024-03-30 10:19:42","msg":"【MonitorServer】Monitor web address： http://localhost:5300/web"}
+{"level":"info","time":"2024-03-30 10:19:42","msg":"【DemoServer】Demo server started","addr":"0.0.0.0:5172"}
+{"level":"info","time":"2024-03-30 10:19:42","msg":"【DemoServer】Chat demo address： http://localhost:5172/chatdemo"}
+{"level":"info","time":"2024-03-30 10:19:42","msg":"【Server】Server is ready"}
+{"level":"debug","time":"2024-03-30 10:19:42","msg":"【UserAPI】req","req":{"uid":"u_10000","token":"670b52fd7919487e935e31f703516694","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-30 10:19:42","msg":"【UserAPI】req","req":{"uid":"fileHelper","token":"fc6b5d47da1244cab8e24caaf7f88666","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-30 10:19:42","msg":"【UserAPI】req","req":{"uid":"admin","token":"a1a3fb5274c849589e351ac6419ba63d","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-30 10:20:52","msg":"【UserAPI】req","req":{"uid":"u_10000","token":"792621d895224fc0a3508a2c511f741b","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-30 10:20:52","msg":"【UserAPI】req","req":{"uid":"fileHelper","token":"2f585aacc72249b2ae5808d0d7800217","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-30 10:20:52","msg":"【UserAPI】req","req":{"uid":"admin","token":"36a40d3018f24d82acdf7a48a342f319","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-30 10:20:57","msg":"【UserAPI】req","req":{"uid":"u_10000","token":"439e2af3a2bf4f389cf0a0736d2e22f0","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-30 10:20:57","msg":"【UserAPI】req","req":{"uid":"fileHelper","token":"9c031e623df24edd83af84786e00d25d","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-30 10:20:57","msg":"【UserAPI】req","req":{"uid":"admin","token":"057ee572a7b740ecb5a3e55a246f8d84","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-30 10:21:58","msg":"【UserAPI】req","req":{"uid":"u_10000","token":"57ec4499908241ffb65695ff470dd805","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-30 10:21:58","msg":"【UserAPI】req","req":{"uid":"fileHelper","token":"84b58d1f2ec1431b872e076fcd5eb8fa","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-30 10:21:58","msg":"【UserAPI】req","req":{"uid":"admin","token":"54809a8ff2214df3968bd300212a242c","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-30 10:22:45","msg":"【UserAPI】req","req":{"uid":"u_10000","token":"cda829a970ec4999a145f90cdf07eef7","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-30 10:22:45","msg":"【UserAPI】req","req":{"uid":"fileHelper","token":"1eb8e95204e547a7b32861c1bd8578cb","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-30 10:22:45","msg":"【UserAPI】req","req":{"uid":"admin","token":"0779d0c10e8e43979bffe308dc4a8a15","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-30 10:23:18","msg":"【UserAPI】req","req":{"uid":"u_10000","token":"625882fa7aa84496894ddd2504779b78","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-30 10:23:18","msg":"【UserAPI】req","req":{"uid":"fileHelper","token":"2a80a268c00740178c1484809a1f6dcd","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-30 10:23:18","msg":"【UserAPI】req","req":{"uid":"admin","token":"825b2bdeeeeb4d4da88d4a74c0ed2e4b","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-30 10:24:21","msg":"【UserAPI】req","req":{"uid":"u_10000","token":"e92716f9568c4d30ba4f5aa9a7cd4774","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-30 10:24:21","msg":"【UserAPI】req","req":{"uid":"fileHelper","token":"a02e3946b62546379ecfa6e576a33f3b","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-30 10:24:21","msg":"【UserAPI】req","req":{"uid":"admin","token":"23bb85401e1b4f24bf034c8ab5115a71","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-30 10:38:04","msg":"【UserAPI】req","req":{"uid":"u_10000","token":"fe05380a8de54b41a061725d44f32fc5","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-30 10:38:04","msg":"【UserAPI】req","req":{"uid":"fileHelper","token":"06ff4fa1b0c94f3a9fcc74a0e3017ff8","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-30 10:38:04","msg":"【UserAPI】req","req":{"uid":"admin","token":"17ea1bfa3f1a4495a7c6ec7f4fe76a8c","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-30 10:43:27","msg":"【UserAPI】req","req":{"uid":"u_10000","token":"41ac0d5685a34f2796085d0b84b7d38c","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-30 10:43:27","msg":"【UserAPI】req","req":{"uid":"fileHelper","token":"564e5ee794d2417cb2d66e2915c1e31b","device_flag":0,"device_level":1}}
+{"level":"debug","time":"2024-03-30 10:43:27","msg":"【UserAPI】req","req":{"uid":"admin","token":"d25ae3e623f2433289de6ca34e5fda9f","device_flag":0,"device_level":1}}

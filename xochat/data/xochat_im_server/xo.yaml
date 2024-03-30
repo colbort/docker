@@ -19,8 +19,8 @@ wukongIM:
 
 ##################### db ####################
 db:
-  initDb: false
-  mysqlAddr: "root:123456@tcp(common_mysql:3306)/tsdd?charset=utf8mb4&parseTime=true" # mysql连接地址
+  initDb: true
+  mysqlAddr: "root:123456@tcp(common_mysql:3306)/xochat?charset=utf8mb4&parseTime=true" # mysql连接地址
   redisAddr: "common_redis:6379" # redis地址
   redisPass: "12345678" # redis密码
   asynctaskRedisAddr: "common_redis:6379" # 异步任务的redis地址 不写默认为RedisAddr的地址
