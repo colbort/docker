@@ -36,13 +36,13 @@ services:
   xochat_im_server:
     image: zyuan909/xochat_im_server:latest-arm64
     container_name: xochat_im_server
-    ports:
-      - "8090:8090"
-      - "6979:6979"
     volumes:
       - ${DATA_PATH_HOST}/xochat_im_server:/home/configs
       - ${DATA_PATH_HOST}/xochat_im_server/push:/home/configs/push
     networks:
       - common
+    ports:
+      - "8090:8090"
+      - "6979:6979"
     depends_on:
       - xochat_im

@@ -21,7 +21,7 @@ wukongIM:
 db:
   migration: true
   mysqlAddr: "root:123456@tcp(common_mysql:3306)/xochat?charset=utf8mb4&parseTime=true" # mysql连接地址
-  onns: 100
+  mysqlMaxOpenConns: 100
   mysqlMaxIdleConns: 10
   mysqlConnMaxLifetime: 1000 * 60 * 60 * 4 # mysql 默认超时时间为 60*60*8=28800 SetConnMaxLifetime设置为小于数据库超时时间即可
   redisAddr: "common_redis:6379" # redis地址
