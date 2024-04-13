@@ -223,6 +223,41 @@ services:
       MINIO_ROOT_PASSWORD: "${MINIO_SECRET_KEY}"
     command: minio server /data --console-address ':9090'
 
+
+  influxdb:
+    image: influxdb:2.7.1
+    container_name: common-influxdb
+    ports:
+      - "8186:8086"
+    volumes:
+      - ${DATA_PATH_HOST}/influxdb:/var/lib/influxdb
+    environment:
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_USERNAME=admin
+      - DOCKER_INFLUXDB_INIT_PASSWORD=admin1234
+      - DOCKER_INFLUXDB_INIT_ORG=openkf
+      - DOCKER_INFLUXDB_INIT_BUCKET=openkf
+      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=admin1234
+    networks:
+      - common
+
+  activemq:
+    image: cskefu/activemq:5.14.3
+    container_name: common-activemq
+    environment:
+      - ACTIVEMQ_ADMIN_LOGIN=admin
+      - ACTIVEMQ_ADMIN_PASSWORD=${DB_PASSWD:-123456}
+      - ACTIVEMQ_ENABLED_SCHEDULER=true
+      - ACTIVEMQ_MIN_MEMORY=1024
+      - ACTIVEMQ_MAX_MEMORY=4096
+    volumes:
+      - ${DATA_PATH_HOST}/activemq/data:/data
+      - ${DATA_PATH_HOST}/activemq/logs:/var/log/activemq
+    ports:
+      - "${ACTIVEMQ_PORT1:-8051}:8161"
+      - "${ACTIVEMQ_PORT2:-8052}:61616"
+      - "${ACTIVEMQ_PORT3:-8053}:61613"
+
 volumes:
   esdata:
     driver: local
