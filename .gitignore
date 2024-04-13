@@ -8,6 +8,7 @@ common/data/nginx/log/
 common/data/postgres/
 common/data/redis/
 common/data/mnt/
+common/data/activemq/
 gitlab/data/data/
 gitlab/data/log/
 harbor/data/
