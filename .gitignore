@@ -9,6 +9,7 @@ common/data/postgres/
 common/data/redis/
 common/data/mnt/
 common/data/activemq/
+common/data/nats/jetstream/
 gitlab/data/data/
 gitlab/data/log/
 harbor/data/
