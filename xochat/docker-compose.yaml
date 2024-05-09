@@ -46,3 +46,12 @@ services:
       - "6979:6979"
     depends_on:
       - xochat_im
+  xochat_im_company:
+    image: zyuan909/xochat_im_companyarm64:latest-arm64
+    container_name: xochat_im_company
+    volumes:
+      - ${DATA_PATH_HOST}/xochat_im_company/config:/home/config
+    networks:
+      - common
+    ports:
+      - "8080:8080"
