@@ -51,7 +51,8 @@ services:
     container_name: xochat_im_company
     volumes:
       - ${DATA_PATH_HOST}/xochat_im_company/config:/home/config
+      - ${DATA_PATH_HOST}/xochat_im_company/log:/home/log
     networks:
       - common
     ports:
-      - "8080:8080"
+      - "8888:8888"
