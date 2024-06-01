@@ -175,9 +175,10 @@ services:
     ports:
       - "8080:80"
     volumes:
-      #      - ${DATA_PATH_HOST}/nginx/conf.d:/etc/nginx/conf.d/
+      # - ${DATA_PATH_HOST}/nginx/conf.d:/etc/nginx/conf.d
       - ${DATA_PATH_HOST}/nginx/app:/usr/share/nginx/html/app
       - ${DATA_PATH_HOST}/nginx/log:/var/log/nginx
+      - ${DATA_PATH_HOST}/nginx/data:/home/data
     networks:
       - common
 

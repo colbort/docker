@@ -12,11 +12,11 @@ networks:
 services:
   xochat_im:
     # wukongim底层通讯服务
-    image: zyuan909/xochat_im:latest-arm64
+    image: zyuan909/xochat_im_arm64:1.0.0
     container_name: xochat_im
     # restart: always
     volumes:
-      - ${DATA_PATH_HOST}/xochat_im:/root/xochat_im
+      - ${DATA_PATH_HOST}/xochat_im:/home/configs
     environment:
       XO_MODE: "debug"
       XO_EXTERNAL_IP: "192.168.10.133"   # 提供IM对外IP；方便客户端和 IM 建立 WS 链接
@@ -34,7 +34,7 @@ services:
       - 5200:5200 # websocket端口
       - 5300:5300 # monitor端口
   xochat_im_server:
-    image: zyuan909/xochat_im_server:latest-arm64
+    image: zyuan909/xochat_im_server_arm64:1.0.0
     container_name: xochat_im_server
     volumes:
       - ${DATA_PATH_HOST}/xochat_im_server:/home/configs
