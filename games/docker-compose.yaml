@@ -11,20 +11,48 @@ networks:
 # 服务容器配置
 services:
   bird_and_animal:
-    image: docker.live168.xyz/game-990601:v1.0.0
+    image: docker.live168.xyz/game-990601:v1.0.1
     container_name: bird_and_animal
     networks:
       - common
   bird_and_animal_gw:
-    image: docker.live168.xyz/gw-990601:v1.0.0
+    image: docker.live168.xyz/gw-990601:v1.0.1
     container_name: bird_and_animal_gw
     environment:
       - PLATFORM=http://192.168.10.133:9777/game-service/
+      - GAMEID=990601
+      - CONSUL=consul:8500
+      - REDIS_HOST=redis:6379
+      - REDIS_PASSWORD=12345678
+      - MODE=info   # dev | warn | info
     networks:
       - common
     ports:
       - "6006:6006"
-      - "6007:6007"
-      - "6008:6008"
-      - "6009:6009"
+  benzbmw:
+    image: docker.live168.xyz/game-970401:v1.0.1
+    container_name: benzbmw
+    environment:
+      - CONSUL=consul:8500
+      - REDIS_HOST=redis:6379
+      - REDIS_PASSWORD=12345678
+      - MODE=info   # dev | warn | info
+      - TABLE_NUM=100 #逻辑服务启动了多少张桌子
+      - MAX=1000  #每张桌子最大容纳的人
+    networks:
+      - common
+  benzbmw_gw:
+    image: docker.live168.xyz/gw-970401:v1.0.1
+    container_name: benzbmw_gw
+    environment:
+      - PLATFORM=http://192.168.10.133:9777/game-service/
+      - GAMEID=990601
+      - CONSUL=consul:8500
+      - REDIS_HOST=redis:6379
+      - REDIS_PASSWORD=12345678
+      - MODE=info   # dev | warn | info
+    networks:
+      - common
+    ports:
+      - "6006:6006"
   
