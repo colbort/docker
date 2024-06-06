@@ -1,0 +1,30 @@
+version: '3.5'
+# 网络配置
+# networks:
+#   backend:
+#     driver: ${NETWORKS_DRIVER}
+
+networks:
+  common:
+    external: true
+
+# 服务容器配置
+services:
+  bird_and_animal:
+    image: docker.live168.xyz/game-990601:v1.0.0
+    container_name: bird_and_animal
+    networks:
+      - common
+  bird_and_animal_gw:
+    image: docker.live168.xyz/gw-990601:v1.0.0
+    container_name: bird_and_animal_gw
+    environment:
+      - PLATFORM=http://192.168.10.133:9777/game-service/
+    networks:
+      - common
+    ports:
+      - "6006:6006"
+      - "6007:6007"
+      - "6008:6008"
+      - "6009:6009"
+  
