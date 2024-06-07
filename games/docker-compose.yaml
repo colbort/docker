@@ -10,9 +10,9 @@ networks:
 
 # 服务容器配置
 services:
-  bird_and_animal:
-    image: docker.live168.xyz/game-990601:v1.0.1
-    container_name: bird_and_animal
+  rbwar:
+    image: docker.live168.xyz/game-960301:v1.0.1
+    container_name: rbwar
     networks:
       - common
     environment:
@@ -22,12 +22,12 @@ services:
       - MODE=info   # dev | warn | info
       - TABLE_NUM=100 #逻辑服务启动了多少张桌子
       - MAX=1000  #每张桌子最大容纳的人
-  bird_and_animal_gw:
-    image: docker.live168.xyz/gw-990601:v1.0.1
-    container_name: bird_and_animal_gw
+  rbwar_gw:
+    image: docker.live168.xyz/gw-960301:v1.0.1
+    container_name: rbwar_gw
     environment:
       - PLATFORM=http://192.168.10.133:9777/game-service/
-      - GAMEID=990601
+      - GAMEID=960301
       - CONSUL=consul:8500
       - REDIS_HOST=redis:6379
       - REDIS_PASSWORD=12345678
