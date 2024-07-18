@@ -12,12 +12,11 @@ networks:
 services:
   xochat_im:
     # wukongim底层通讯服务
-    # image: zyuan909/xochat_im_arm64:1.0.0
-    image: zyuan909/wukongim:1.0.1-arm64
+    image: zyuan909/xochat_im_arm64:1.0.0
     container_name: xochat_im
     # restart: always
-    # volumes:
-    #   - ${DATA_PATH_HOST}/xochat_im:/home/configs
+    volumes:
+      - ${DATA_PATH_HOST}/xochat_im:/home/configs
     environment:
       XO_MODE: "debug"
       XO_EXTERNAL_IP: "192.168.10.133"   # 提供IM对外IP；方便客户端和 IM 建立 WS 链接
@@ -35,12 +34,11 @@ services:
       - 5200:5200 # websocket端口
       - 5300:5300 # monitor端口
   xochat_im_server:
-    # image: zyuan909/xochat_im_server_arm64:1.0.0
-    image: zyuan909/tangsengdaodaoserver:1.0.1-arm64
+    image: zyuan909/xochat_im_server_arm64:1.0.0
     container_name: xochat_im_server
-    # volumes:
-    #   - ${DATA_PATH_HOST}/xochat_im_server:/home/configs
-    #   - ${DATA_PATH_HOST}/xochat_im_server/push:/home/configs/push
+    volumes:
+      - ${DATA_PATH_HOST}/xochat_im_server:/home/configs
+      - ${DATA_PATH_HOST}/xochat_im_server/push:/home/configs/push
     networks:
       - common
     ports:
@@ -58,3 +56,41 @@ services:
       - common
     ports:
       - "8888:8888"
+
+
+  wukongim:
+    # wukongim底层通讯服务
+    image: zyuan909/wukongim:1.0.3-arm64
+    container_name: wukongim
+    # restart: always
+    volumes:
+      - ${DATA_PATH_HOST}/wukongim:/home/configs
+    environment:
+      XO_MODE: "debug"
+      XO_EXTERNAL_IP: "192.168.10.133"   # 提供IM对外IP；方便客户端和 IM 建立 WS 链接
+    networks:
+      - common
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:15001/health"]
+      interval: 1m30s
+      timeout: 30s
+      retries: 5
+      start_period: 30s
+    ports:
+      - 15001:15001 # http api 端口
+      - 15100:15100 # tcp端口
+      - 15200:15200 # websocket端口
+      - 15300:15300 # monitor端口
+  tangsengdaodaoserver:
+    image: zyuan909/tangsengdaodaoserver:1.0.3-arm64
+    container_name: tangsengdaodaoserver
+    # volumes:
+    #   - ${DATA_PATH_HOST}/tangsengdaodaoserver:/home/configs
+    #   - ${DATA_PATH_HOST}/tangsengdaodaoserver/push:/home/configs/push
+    networks:
+      - common
+    ports:
+      - "18090:18090"
+      - "16979:16979"
+    depends_on:
+      - wukongim
