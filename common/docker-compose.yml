@@ -259,6 +259,20 @@ services:
       - "${ACTIVEMQ_PORT2:-8052}:61616"
       - "${ACTIVEMQ_PORT3:-8053}:61613"
 
+  tomcat:
+    image: tomcat:latest
+    container_name: tomcat
+    ports:
+      - "8080:8080"
+    volumes:
+      - ${DATA_PATH_HOST}/tomcat/webapps:/usr/local/tomcat/webapps
+      - ${DATA_PATH_HOST}/tomcat/logs:/usr/local/tomcat/logs
+    #   - ${DATA_PATH_HOST}/tomcat/conf:/usr/local/tomcat/conf
+    environment:
+      - JAVA_OPTS=-Xmx512M
+    networks:
+      - common
+
 volumes:
   esdata:
     driver: local
