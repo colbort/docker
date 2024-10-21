@@ -281,6 +281,33 @@ services:
       TZ: America/New_York
     networks:
       - common
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672" # RabbitMQ 默认端口
+      - "15672:15672" # RabbitMQ 管理界面端口
+    environment:
+      RABBITMQ_DEFAULT_USER: guest # 默认用户名
+      RABBITMQ_DEFAULT_PASS: guest # 默认密码
+    volumes:
+      - ${DATA_PATH_HOST}/rabbitmq:/var/lib/rabbitmq # 数据持久化
+  seata-server:
+    image: seataio/seata-server:latest
+    container_name: seata
+    environment:
+      - SEATA_IP=seata-server
+      - STORE_MODE=db
+      - DB_TYPE=mysql
+      - MYSQL_SERVICE_HOST=common_mysql
+      - MYSQL_SERVICE_PORT=3306
+      # - MYSQL_USER=seata
+      # - MYSQL_PASSWORD=seata
+      # - MYSQL_DATABASE=seata
+    ports:
+      - "8091:8091"
+    depends_on:
+      - mysql
 
 volumes:
   esdata:
