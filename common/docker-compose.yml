@@ -271,14 +271,16 @@ services:
     networks:
       - common
   zookeeper:
-    image: zookeeper:3.9.1
+    image: ubuntu/zookeeper:latest
     container_name: zookeeper
-    # network_mode: host
     ports:
       - 2181:2181
     environment:
       ZOO_MY_ID: 1
       TZ: America/New_York
+    # volumes:
+    #   - ${DATA_PATH_HOST}/conf/zookeeper:/conf # 将配置文件挂载到容器
+    #   - ${DATA_PATH_HOST}/zookeeper:/var/lib/zookeeper # 确保 myid 文件存在
     networks:
       - common
   rabbitmq:
