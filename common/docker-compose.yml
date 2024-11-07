@@ -298,14 +298,17 @@ services:
     image: seataio/seata-server:latest
     container_name: seata
     environment:
-      - SEATA_IP=seata-server
-      - STORE_MODE=db
-      - DB_TYPE=mysql
-      - MYSQL_SERVICE_HOST=common_mysql
-      - MYSQL_SERVICE_PORT=3306
-      # - MYSQL_USER=seata
-      # - MYSQL_PASSWORD=seata
+      SEATA_CONFIG_NAME: file:/root/seata-config/registry
+      # - SEATA_IP=seata-server
+      # - STORE_MODE=db
+      # - DB_TYPE=mysql
+      # - MYSQL_SERVICE_HOST=common_mysql
+      # - MYSQL_SERVICE_PORT=3306
+      # - MYSQL_USER=root
+      # - MYSQL_PASSWORD=${MYSQL_ROOT_PASSWORD}
       # - MYSQL_DATABASE=seata
+    volumes:
+      - ${DATA_PATH_HOST}/seata-config:/root/seata-config
     ports:
       - "8091:8091"
     depends_on:
