@@ -188,6 +188,8 @@ services:
     volumes:
       - ${DATA_PATH_HOST}/promtail:/etc/promtail
     command: -config.file=/etc/promtail/config.yaml
+    networks:
+      - common
 
   mongodb:
     image: mongo:latest
@@ -208,6 +210,8 @@ services:
       - MONGO_INITDB_DATABASE=${MONGO_DATABASE}
       - MONGO_OPENIM_USERNAME=${MONGO_OPENIM_USERNAME} # Non-root username
       - MONGO_OPENIM_PASSWORD=${MONGO_OPENIM_PASSWORD} # Non-root password
+    networks:
+      - common
 
   minio:
     image: minio/minio:latest
@@ -222,6 +226,8 @@ services:
       MINIO_ROOT_USER: "${MINIO_ACCESS_KEY}"
       MINIO_ROOT_PASSWORD: "${MINIO_SECRET_KEY}"
     command: minio server /data --console-address ':9090'
+    networks:
+      - common
 
   influxdb:
     image: influxdb:2.7.1
@@ -256,6 +262,8 @@ services:
       - "${ACTIVEMQ_PORT1:-8051}:8161"
       - "${ACTIVEMQ_PORT2:-8052}:61616"
       - "${ACTIVEMQ_PORT3:-8053}:61613"
+    networks:
+      - common
 
   tomcat:
     image: tomcat:latest
@@ -270,6 +278,7 @@ services:
       - JAVA_OPTS=-Xmx512M
     networks:
       - common
+
   zookeeper:
     image: ubuntu/zookeeper:latest
     container_name: zookeeper
@@ -283,6 +292,7 @@ services:
     #   - ${DATA_PATH_HOST}/zookeeper:/var/lib/zookeeper # 确保 myid 文件存在
     networks:
       - common
+
   rabbitmq:
     image: rabbitmq:3-management
     container_name: rabbitmq
@@ -294,6 +304,9 @@ services:
       RABBITMQ_DEFAULT_PASS: guest # 默认密码
     volumes:
       - ${DATA_PATH_HOST}/rabbitmq:/var/lib/rabbitmq # 数据持久化
+    networks:
+      - common
+
   seata-server:
     image: seataio/seata-server:latest
     container_name: seata
@@ -311,8 +324,60 @@ services:
       - ${DATA_PATH_HOST}/seata-config:/root/seata-config
     ports:
       - "8091:8091"
+    networks:
+      - common
     depends_on:
       - mysql
+
+  yunwei-oauth-server:
+    image: docker.live168.xyz/yunwei-oauth-server:1.0.5
+    container_name: oauth_server
+    ports:
+      - "30500:30500"
+    networks:
+      - common
+  #    depends_on:
+  #      - mysql
+  #      - redis
+  #      - rabbitmq
+  #      - seata
+  #      - nacos
+
+  yunwei-mq-consumer:
+    image: docker.live168.xyz/yunwei-mq-consumer:1.0.2
+    container_name: mq_consumer
+    ports:
+      - "30503:30503"
+    networks:
+      - common
+  #    depends_on:
+  #      - mysql
+  #      - redis
+  #      - rabbitmq
+  #      - seata
+  #      - nacos
+
+  yunwei-app-api:
+    image: docker.live168.xyz/yunwei-app-api:1.0.2
+    container_name: app_api
+    ports:
+      - "30501:30501"
+    networks:
+      - common
+    depends_on:
+      - yunwei-oauth-server
+      - yunwei-mq-consumer
+
+  yunwei-admin-api:
+    image: docker.live168.xyz/yunwei-admin-api:1.0.2
+    container_name: admin_api
+    ports:
+      - "30502:30502"
+    networks:
+      - common
+    depends_on:
+      - yunwei-oauth-server
+      - yunwei-mq-consumer
 
 volumes:
   esdata:
