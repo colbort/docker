@@ -37,6 +37,7 @@ services:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD} # 设置 Mysql root 用户密码
       - MYSQL_SQL_MODE="NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES"
     privileged: true
+    command: --sql-mode="NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES" # 禁用 ONLY_FULL_GROUP_BY
     volumes:
       - ${DATA_PATH_HOST}/mysql:/var/lib/mysql # 引用 .env 配置中 DATA_PATH_HOST 变量，将宿主机上存放 Mysql 数据的目录挂载到容器中 /var/lib/mysql 目录
     ports:
