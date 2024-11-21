@@ -67,21 +67,20 @@ services:
       context: ./nacos-server
     container_name: common_nacos
     platform: linux/arm64
-    privileged: true
     environment:
       - TZ=Asia/Shanghai
       - MODE=standalone
-      # - SPRING_DATASOURCE_PLATFORM=mysql
-      # - MYSQL_SERVICE_HOST=127.0.0.1
-      # - MYSQL_SERVICE_PORT=3306
-      # - MYSQL_SERVICE_USER=root
-      # - MYSQL_SERVICE_PASSWORD=123456
-      # - MYSQL_SERVICE_DB_NAME=nacos
-      # - MYSQL_SERVICE_DB_PARAM=characterEncoding=utf8&connectTimeout=10000&socketTimeout=3000&autoReconnect=true&useSSL=false&serverTimezone=UTC
-      - JVM_XMS=128m
-      - JVM_XMX=128m
-      - JVM_XMN=128m
-      - NACOS_AUTH_ENABLE=false
+      - SPRING_DATASOURCE_PLATFORM=mysql
+      - MYSQL_SERVICE_HOST=common_mysql
+      - MYSQL_SERVICE_DB_NAME=nacos_devtest
+      - MYSQL_SERVICE_PORT=3306
+      - MYSQL_SERVICE_USER=root
+      - MYSQL_SERVICE_PASSWORD=123456
+      - MYSQL_SERVICE_DB_PARAM=characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+      - NACOS_AUTH_IDENTITY_KEY=2222
+      - NACOS_AUTH_IDENTITY_VALUE=2xxx
+      - NACOS_AUTH_TOKEN=SecretKey012345678901234567890123456789012345678901234567890123456789
+      - NACOS_AUTH_ENABLE=true
     ports:
       - "8848:8848"
     networks:
