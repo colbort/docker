@@ -1,0 +1,87 @@
+version: '3.8'
+
+services:
+  ### 🐳 Nginx 服务器 (代理 Vue & ThinkPHP)
+  nginx:
+    image: nginx:latest
+    container_name: crmchat_nginx
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./www:/var/www/html  # PHP 代码
+      - ./frontend/dist:/var/www/html/frontend  # Vue 构建后的前端文件
+    depends_on:
+      - php
+      - vue
+    networks:
+      - crmchat_network
+
+  ### 🐘 MySQL 数据库
+  mysql:
+    image: mysql:8.0
+    container_name: crmchat_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: crmchat
+      MYSQL_USER: crmuser
+      MYSQL_PASSWORD: crmpass
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - crmchat_network
+
+  ### 🛠 PHP + Swoole (ThinkPHP6)
+  php:
+    image: phpswoole/swoole:latest
+    container_name: crmchat_php
+    restart: always
+    volumes:
+      - ./www:/var/www/html
+    working_dir: /var/www/html
+    command: php think swoole
+    depends_on:
+      - mysql
+      - redis
+    networks:
+      - crmchat_network
+
+  ### 🔥 Redis 缓存 & 队列
+  redis:
+    image: redis:latest
+    container_name: crmchat_redis
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - crmchat_network
+
+  ### 🌐 Vue 前端 (Node 服务器)
+  vue:
+    image: node:latest
+    container_name: crmchat_vue
+    restart: always
+    working_dir: /app
+    volumes:
+      - ./frontend:/app
+    command: ["sh", "-c", "npm install && npm run serve"]
+    ports:
+      - "5173:5173"  # Vue 默认开发端口
+    networks:
+      - crmchat_network
+
+networks:
+  crmchat_network:
+
+volumes:
+  mysql_data:
+  redis_data:
+
