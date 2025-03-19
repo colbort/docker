@@ -68,7 +68,7 @@ services:
     container_name: common_nacos
     platform: linux/arm64
     environment:
-      - TZ=Asia/Shanghai
+      - TZ=${TZ}
       - MODE=standalone
       - SPRING_DATASOURCE_PLATFORM=mysql
       - MYSQL_SERVICE_HOST=common_mysql
