@@ -1,0 +1,55 @@
+version: "3.7"
+
+services:
+  php:
+    container_name: crmchat_php
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./www:/var/www/html
+    working_dir: /var/www/html
+    restart: unless-stopped
+    ports:
+      - "20108:20108"
+    networks:
+      - crmchat_network
+    depends_on:
+      - mysql
+      - redis
+    command: ["/entrypoint.sh"]
+
+  mysql:
+    image: bitnami/mysql:8.0
+    container_name: crmchat_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: crmchat
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin123
+      MYSQL_ROOT_HOST: "%"
+      MYSQL_AUTHENTICATION_PLUGIN: mysql_native_password
+    volumes:
+      - mysql_data:/bitnami/mysql
+      - ./my.cnf:/opt/bitnami/mysql/conf/my_custom.cnf
+    ports:
+      - "3306:3306"
+    networks:
+      - crmchat_network
+
+
+  redis:
+    image: redis:5
+    container_name: crmchat_redis
+    restart: always
+    ports:
+      - "6379:6379"
+    networks:
+      - crmchat_network
+
+networks:
+  crmchat_network:
+
+volumes:
+  mysql_data:
