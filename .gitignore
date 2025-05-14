@@ -12,6 +12,7 @@ common/data/activemq/
 common/data/nats/jetstream/
 common/data/tomcat/
 common/data/rabbitmq/
+common/data/seata/logs/
 gitlab/data/data/
 gitlab/data/log/
 harbor/data/

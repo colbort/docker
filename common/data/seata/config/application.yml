@@ -1,0 +1,60 @@
+server:
+  port: 7091
+
+spring:
+  application:
+    name: seata-server
+
+logging:
+  config: classpath:logback-spring.xml
+  file:
+    path: ${user.home}/logs/seata
+  extend:
+    logstash-appender:
+      destination: 127.0.0.1:4560
+    kafka-appender:
+      bootstrap-servers: 127.0.0.1:9092
+      topic: logback_to_logstash
+
+console:
+  user:
+    username: seata
+    password: seata
+
+seata:
+  tx-service-group:
+    - default_tx_group
+  service:
+    vgroup-mapping:
+      default_tx_group: default
+    vgroupMapping:
+      default_tx_group: default
+      default:
+        - default_tx_group
+    default:
+      grouplist: seata-server:8091
+  store:
+    mode: db
+    db:
+      dbType: mysql
+      driverClassName: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://common-mysql:3306/seata?useUnicode=true&characterEncoding=utf-8&useSSL=false
+      user: root
+      password: 123456
+  registry:
+    type: nacos
+    nacos:
+      application: seata-server
+      server-addr: common-nacos:8848
+      username: nacos
+      password: 123456
+  # config:
+  #   type: nacos
+  #   nacos:
+  #     server-addr: common-nacos:8848
+  #     username: nacos
+  #     password: 123456
+  #     data-id: seata-server.properties
+  security:
+    secretKey: SeataSecretKey0c382ef121d778043159209298fd40bf3850a017
+    tokenValidityInMilliseconds: 1800000

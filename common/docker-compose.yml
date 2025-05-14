@@ -29,7 +29,7 @@ services:
   mysql:
     build:
       context: ./mysql
-    container_name: common_mysql
+    container_name: common-mysql
     environment:
       - TZ=${TZ}
       #      - MYSQL_USER=${MYSQL_USERNAME} # 设置 Mysql 用户名称
@@ -49,7 +49,7 @@ services:
   redis:
     build:
       context: ./redis
-    container_name: common_redis
+    container_name: common-redis
     environment:
       - TZ=${TZ}
     privileged: true
@@ -65,13 +65,13 @@ services:
   nacos-server:
     build:
       context: ./nacos-server
-    container_name: common_nacos
+    container_name: common-nacos
     platform: linux/arm64
     environment:
       - TZ=${TZ}
       - MODE=standalone
       - SPRING_DATASOURCE_PLATFORM=mysql
-      - MYSQL_SERVICE_HOST=common_mysql
+      - MYSQL_SERVICE_HOST=common-mysql
       - MYSQL_SERVICE_DB_NAME=nacos_devtest
       - MYSQL_SERVICE_PORT=3306
       - MYSQL_SERVICE_USER=root
@@ -90,7 +90,7 @@ services:
   nats:
     build:
       context: ./nats
-    container_name: common_nats
+    container_name: common-nats
     volumes:
       - ${DATA_PATH_HOST}/nats/jetstream:/tmp/nats/jetstream
     ports:
@@ -309,14 +309,17 @@ services:
       - common
 
   seata-server:
-    image: seataio/seata-server:latest
-    container_name: seata
+    image: seataio/seata-server:2.0.0
+    container_name: seata-server
     environment:
-      SEATA_CONFIG_NAME: file:/root/seata-config/registry
+      - SEATA_IP=192.168.10.126
+    #   - SEATA_CONFIG_NAME=file:/root/seata-config/registry.conf
     volumes:
-      - ${DATA_PATH_HOST}/seata-config:/root/seata-config
+      # - ${DATA_PATH_HOST}/seata/config:/root/seata-config
+      - ${DATA_PATH_HOST}/seata/config/application.yml:/seata-server/resources/application.yml
     ports:
       - "8091:8091"
+      - "7091:7091"
     networks:
       - common
     depends_on:
