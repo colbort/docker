@@ -202,7 +202,7 @@ services:
       - "${DATA_PATH_HOST}/mongodb/data/db:/data/db"
       - "${DATA_PATH_HOST}/mongodb/data/logs:/data/logs"
       - "${DATA_PATH_HOST}/mongodb/data/conf:/etc/mongo"
-      - "./scripts/mongo-init.sh:/docker-entrypoint-initdb.d/mongo-init.sh:ro"
+      # - "./scripts/mongo-init.sh:/docker-entrypoint-initdb.d/mongo-init.sh:ro"
     environment:
       - TZ=Asia/Shanghai
       - wiredTigerCacheSizeGB=1
@@ -332,6 +332,15 @@ services:
       - "8858:8858"
     networks:
       - common
+
+  conusl:
+    image: hashicorp/consul
+    container_name: consul
+    networks:
+      - common
+    ports:
+      - "8500:8500"
+      - "8600:8600/udp"
 
 volumes:
   esdata:
