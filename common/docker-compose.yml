@@ -193,9 +193,9 @@ services:
       - common
 
   mongodb:
-    image: mongo:latest
+    image: mongo:4.0.1
     ports:
-      - "37017:27017"
+      - "27017:27017"
     container_name: common_mongo
     command: --wiredTigerCacheSizeGB 1 --auth
     volumes:
@@ -291,6 +291,19 @@ services:
     # volumes:
     #   - ${DATA_PATH_HOST}/conf/zookeeper:/conf # 将配置文件挂载到容器
     #   - ${DATA_PATH_HOST}/zookeeper:/var/lib/zookeeper # 确保 myid 文件存在
+    networks:
+      - common
+
+  kafka:
+    image: confluentinc/cp-kafka:7.5.0
+    container_name: kafka
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
     networks:
       - common
 
