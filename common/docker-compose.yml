@@ -100,6 +100,17 @@ services:
     # environment:
     #   - NATS_CONFIG=/nats_config/nats.conf
 
+  nats-box:
+    image: natsio/nats-box
+    container_name: my-nats-box
+    depends_on:
+      - nats
+    networks:
+      - common
+    entrypoint: /bin/sh
+    stdin_open: true
+    tty: true
+
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.15.1
     container_name: common_elasticsearch
