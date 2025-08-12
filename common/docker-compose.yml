@@ -204,7 +204,7 @@ services:
       - common
 
   mongodb:
-    image: mongo:4.0.1
+    image: mongo:latest
     ports:
       - "27017:27017"
     container_name: common_mongo
