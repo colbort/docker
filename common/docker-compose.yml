@@ -30,7 +30,7 @@ services:
   mysql:
     build:
       context: ./mysql
-    container_name: common_mysql
+    container_name: common-mysql
     environment:
       - TZ=${TZ}
       #      - MYSQL_USER=${MYSQL_USERNAME} # 设置 Mysql 用户名称
@@ -50,7 +50,7 @@ services:
   redis:
     build:
       context: ./redis
-    container_name: common_redis
+    container_name: common-redis
     environment:
       - TZ=${TZ}
     privileged: true
@@ -66,31 +66,32 @@ services:
   nacos-server:
     build:
       context: ./nacos-server
-    container_name: common_nacos
+    container_name: common-nacos
     platform: linux/arm64
     environment:
       - TZ=${TZ}
       - MODE=standalone
       - SPRING_DATASOURCE_PLATFORM=mysql
-      - MYSQL_SERVICE_HOST=common_mysql
+      - MYSQL_SERVICE_HOST=common-mysql
       - MYSQL_SERVICE_DB_NAME=nacos_devtest
       - MYSQL_SERVICE_PORT=3306
       - MYSQL_SERVICE_USER=root
       - MYSQL_SERVICE_PASSWORD=123456
       - MYSQL_SERVICE_DB_PARAM=characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
-      - NACOS_AUTH_IDENTITY_KEY=2222
-      - NACOS_AUTH_IDENTITY_VALUE=2xxx
+      - NACOS_AUTH_IDENTITY_KEY=nacos
+      - NACOS_AUTH_IDENTITY_VALUE=123456
       - NACOS_AUTH_TOKEN=SecretKey012345678901234567890123456789012345678901234567890123456789
-      - NACOS_AUTH_ENABLE=true
+      - NACOS_AUTH_ENABLE=false
     ports:
       - "8848:8848"
+      - "9848:9848"
     networks:
       - common
 
   nats:
     build:
       context: ./nats
-    container_name: common_nats
+    container_name: common-nats
     volumes:
       - ${DATA_PATH_HOST}/nats/jetstream:/tmp/nats/jetstream
     ports:
@@ -99,6 +100,17 @@ services:
       - common
     # environment:
     #   - NATS_CONFIG=/nats_config/nats.conf
+
+  nats-box:
+    image: natsio/nats-box
+    container_name: my-nats-box
+    depends_on:
+      - nats
+    networks:
+      - common
+    entrypoint: /bin/sh
+    stdin_open: true
+    tty: true
 
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.15.1
@@ -195,14 +207,14 @@ services:
   mongodb:
     image: mongo:latest
     ports:
-      - "37017:27017"
+      - "27017:27017"
     container_name: common_mongo
     command: --wiredTigerCacheSizeGB 1 --auth
     volumes:
       - "${DATA_PATH_HOST}/mongodb/data/db:/data/db"
       - "${DATA_PATH_HOST}/mongodb/data/logs:/data/logs"
       - "${DATA_PATH_HOST}/mongodb/data/conf:/etc/mongo"
-      - "./scripts/mongo-init.sh:/docker-entrypoint-initdb.d/mongo-init.sh:ro"
+      # - "./scripts/mongo-init.sh:/docker-entrypoint-initdb.d/mongo-init.sh:ro"
     environment:
       - TZ=Asia/Shanghai
       - wiredTigerCacheSizeGB=1
@@ -294,6 +306,19 @@ services:
     networks:
       - common
 
+  kafka:
+    image: confluentinc/cp-kafka:7.5.0
+    container_name: kafka
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    networks:
+      - common
+
   rabbitmq:
     image: rabbitmq:3-management
     container_name: rabbitmq
@@ -309,18 +334,38 @@ services:
       - common
 
   seata-server:
-    image: seataio/seata-server:latest
-    container_name: seata
+    image: seataio/seata-server:2.0.0
+    container_name: seata-server
     environment:
-      SEATA_CONFIG_NAME: file:/root/seata-config/registry
+      - SEATA_IP=192.168.10.126
+    #   - SEATA_CONFIG_NAME=file:/root/seata-config/registry.conf
     volumes:
-      - ${DATA_PATH_HOST}/seata-config:/root/seata-config
+      # - ${DATA_PATH_HOST}/seata/config:/root/seata-config
+      - ${DATA_PATH_HOST}/seata/config/application.yml:/seata-server/resources/application.yml
     ports:
       - "8091:8091"
+      - "7091:7091"
     networks:
       - common
     depends_on:
       - mysql
+
+  sentinel-dashboard:
+    image: bladex/sentinel-dashboard:latest # 官方镜像
+    container_name: sentinel-dashboard
+    ports:
+      - "8858:8858"
+    networks:
+      - common
+
+  conusl:
+    image: hashicorp/consul
+    container_name: consul
+    networks:
+      - common
+    ports:
+      - "8500:8500"
+      - "8600:8600/udp"
 
 volumes:
   esdata:
