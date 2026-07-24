@@ -62,6 +62,52 @@ services:
       - common
   #    restart: always
 
+  beanstalkd-1:
+    build:
+      context: ./beanstalkd
+    image: wklive/beanstalkd:1.13
+    container_name: common-beanstalkd-1
+    restart: unless-stopped
+    volumes:
+      - ${DATA_PATH_HOST}/beanstalkd-1:/data
+    ports:
+      - "11300:11300"
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "printf 'stats\r\n' | nc -w 1 127.0.0.1 11300 | grep -q '^OK'",
+        ]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 5s
+    networks:
+      - common
+
+  beanstalkd-2:
+    build:
+      context: ./beanstalkd
+    image: wklive/beanstalkd:1.13
+    container_name: common-beanstalkd-2
+    restart: unless-stopped
+    volumes:
+      - ${DATA_PATH_HOST}/beanstalkd-2:/data
+    ports:
+      - "11301:11300"
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "printf 'stats\r\n' | nc -w 1 127.0.0.1 11300 | grep -q '^OK'",
+        ]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 5s
+    networks:
+      - common
+
   nacos-server:
     build:
       context: ./nacos-server
@@ -204,7 +250,7 @@ services:
       - common
 
   mongodb:
-    image: mongo:latest
+    image: mongo:4.4
     ports:
       - "27017:27017"
     container_name: common_mongo

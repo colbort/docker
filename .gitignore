@@ -13,6 +13,8 @@ common/data/nats/jetstream/
 common/data/tomcat/
 common/data/rabbitmq/
 common/data/seata/logs/
+common/data/beanstalkd-1
+common/data/beanstalkd-2
 gitlab/data/data/
 gitlab/data/log/
 harbor/data/
