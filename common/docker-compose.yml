@@ -13,7 +13,7 @@ services:
     # 自定义容器名称
     build:
       context: ./etcd # 指定构建使用的 Dockerfile 文件
-    container_name: common_etcd
+    container_name: etcd
     environment:
       - TZ=${TZ}
       - ALLOW_NONE_AUTHENTICATION=yes
@@ -29,7 +29,7 @@ services:
   mysql:
     build:
       context: ./mysql
-    container_name: common-mysql
+    container_name: mysql
     environment:
       - TZ=${TZ}
       #      - MYSQL_USER=${MYSQL_USERNAME} # 设置 Mysql 用户名称
@@ -49,7 +49,7 @@ services:
   redis:
     build:
       context: ./redis
-    container_name: common-redis
+    container_name: redis
     environment:
       - TZ=${TZ}
     privileged: true
@@ -66,8 +66,8 @@ services:
     build:
       context: ./beanstalkd
     image: wklive/beanstalkd:1.13
-    container_name: common-beanstalkd-1
-    restart: unless-stopped
+    container_name: beanstalkd-1
+    # restart: unless-stopped
     volumes:
       - ${DATA_PATH_HOST}/beanstalkd-1:/data
     ports:
@@ -89,8 +89,8 @@ services:
     build:
       context: ./beanstalkd
     image: wklive/beanstalkd:1.13
-    container_name: common-beanstalkd-2
-    restart: unless-stopped
+    container_name: beanstalkd-2
+    # restart: unless-stopped
     volumes:
       - ${DATA_PATH_HOST}/beanstalkd-2:/data
     ports:
@@ -111,13 +111,13 @@ services:
   nacos-server:
     build:
       context: ./nacos-server
-    container_name: common-nacos
+    container_name: nacos
     platform: linux/arm64
     environment:
       - TZ=${TZ}
       - MODE=standalone
       - SPRING_DATASOURCE_PLATFORM=mysql
-      - MYSQL_SERVICE_HOST=common-mysql
+      - MYSQL_SERVICE_HOST=mysql
       - MYSQL_SERVICE_DB_NAME=nacos_devtest
       - MYSQL_SERVICE_PORT=3306
       - MYSQL_SERVICE_USER=root
@@ -136,7 +136,7 @@ services:
   nats:
     build:
       context: ./nats
-    container_name: common-nats
+    container_name: nats
     volumes:
       - ${DATA_PATH_HOST}/nats/jetstream:/tmp/nats/jetstream
     ports:
@@ -146,20 +146,9 @@ services:
     # environment:
     #   - NATS_CONFIG=/nats_config/nats.conf
 
-  nats-box:
-    image: natsio/nats-box
-    container_name: my-nats-box
-    depends_on:
-      - nats
-    networks:
-      - common
-    entrypoint: /bin/sh
-    stdin_open: true
-    tty: true
-
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.15.1
-    container_name: common_elasticsearch
+    container_name: elasticsearch
     environment:
       - node.name=elasticsearch
       - discovery.seed_hosts=elasticsearch
@@ -182,7 +171,7 @@ services:
 
   kibana:
     image: docker.elastic.co/kibana/kibana:7.15.1
-    container_name: common_kibana
+    container_name: kibana
     ports:
       - "5601:5601"
     environment:
@@ -192,12 +181,12 @@ services:
 
   logstash:
     image: docker.elastic.co/logstash/logstash:7.15.1
-    container_name: common_logstash
+    container_name: logstash
     volumes:
       - ./logstash/config:/usr/share/logstash/pipeline
     ports:
       - "5044:5044"
-      - "5000:5000"
+      - "5001:5000"
     environment:
       - "ES_JAVA_OPTS=-Xms256m -Xmx256m"
     depends_on:
@@ -208,7 +197,7 @@ services:
   postgres:
     build:
       context: ./postgres
-    container_name: common_postgres
+    container_name: postgres
     environment:
       POSTGRES_PASSWORD: 123456
       POSTGRES_USER: root
@@ -229,7 +218,7 @@ services:
 
   nginx:
     image: nginx
-    container_name: common_nginx
+    container_name: nginx
     ports:
       - "8080:80"
     volumes:
@@ -242,7 +231,7 @@ services:
 
   promtail:
     image: grafana/promtail:latest
-    container_name: common_promtail
+    container_name: promtail
     volumes:
       - ${DATA_PATH_HOST}/promtail:/etc/promtail
     command: -config.file=/etc/promtail/config.yaml
@@ -253,7 +242,7 @@ services:
     image: mongo:4.4
     ports:
       - "27017:27017"
-    container_name: common_mongo
+    container_name: mongo
     command: --wiredTigerCacheSizeGB 1 --auth
     volumes:
       - "${DATA_PATH_HOST}/mongodb/data/db:/data/db"
@@ -276,7 +265,7 @@ services:
     ports:
       - "${MINIO_PORT}:9000"
       - "9090:9090"
-    container_name: common_minio
+    container_name: minio
     volumes:
       - "${DATA_PATH_HOST}/mnt/data:/data"
       - "${DATA_PATH_HOST}/mnt/config:/root/.minio"
@@ -289,7 +278,7 @@ services:
 
   influxdb:
     image: influxdb:2.7.1
-    container_name: common-influxdb
+    container_name: influxdb
     ports:
       - "8186:8086"
     volumes:
@@ -306,7 +295,7 @@ services:
 
   activemq:
     image: cskefu/activemq:5.14.3
-    container_name: common-activemq
+    container_name: activemq
     environment:
       - ACTIVEMQ_ADMIN_LOGIN=admin
       - ACTIVEMQ_ADMIN_PASSWORD=${DB_PASSWD:-123456}
@@ -327,7 +316,7 @@ services:
     image: tomcat:latest
     container_name: tomcat
     ports:
-      - "8080:8080"
+      - "8081:8080"
     volumes:
       - ${DATA_PATH_HOST}/tomcat/webapps:/usr/local/tomcat/webapps
       - ${DATA_PATH_HOST}/tomcat/logs:/usr/local/tomcat/logs
