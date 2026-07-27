@@ -1,3 +1,3 @@
-FROM bitnami/etcd:3.5.10
+FROM quay.io/coreos/etcd:v3.7.1
 
 CMD [ "etcd" ]
