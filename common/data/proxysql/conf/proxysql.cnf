@@ -1,0 +1,27 @@
+datadir="/var/lib/proxysql"
+
+
+admin_variables=
+{
+    admin_credentials="admin:admin"
+
+    mysql_ifaces="0.0.0.0:6032"
+}
+
+
+mysql_variables=
+{
+    threads=4
+
+    max_connections=2048
+
+    interfaces="0.0.0.0:6033"
+
+    default_query_timeout=36000000
+
+    connect_timeout_server=3000
+
+    monitor_username="monitor"
+
+    monitor_password="monitor"
+}

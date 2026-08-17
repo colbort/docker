@@ -46,6 +46,41 @@ services:
       - common
   #    restart: always
 
+  proxysql:
+    image: proxysql/proxysql:2.7.3
+    container_name: proxysql
+    # restart: always
+
+    ports:
+      - "6033:6033" # 应用连接端口
+      - "6032:6032" # 管理端口
+
+    volumes:
+      - ${DATA_PATH_HOST}/proxysql/conf/proxysql.cnf:/etc/proxysql.cnf
+      - ${DATA_PATH_HOST}/proxysql/data:/var/lib/proxysql
+
+    environment:
+      TZ: Asia/Kuala_Lumpur
+
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "mysql",
+          "-h127.0.0.1",
+          "-P6032",
+          "-uadmin",
+          "-padmin",
+          "-e",
+          "select 1",
+        ]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+    networks:
+      - common
+
   redis:
     build:
       context: ./redis

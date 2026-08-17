@@ -1,0 +1,174 @@
+services:
+  pd1:
+    image: pingcap/pd:latest
+    container_name: tidb-pd1
+    command:
+      - "--name=pd1"
+      - "--data-dir=/data/pd1"
+      - "--client-urls=http://0.0.0.0:2379"
+      - "--peer-urls=http://0.0.0.0:2380"
+      - "--advertise-client-urls=http://pd1:2379"
+      - "--advertise-peer-urls=http://pd1:2380"
+      - "--initial-cluster=pd1=http://pd1:2380,pd2=http://pd2:2380,pd3=http://pd3:2380"
+      - "--initial-cluster-state=new"
+      - "--log-file=/data/pd1/pd.log"
+    ports:
+      - "2379:2379"
+      - "2380:2380"
+    volumes:
+      - pd1-data:/data/pd1
+    restart: unless-stopped
+
+  pd2:
+    image: pingcap/pd:latest
+    container_name: tidb-pd2
+    command:
+      - "--name=pd2"
+      - "--data-dir=/data/pd2"
+      - "--client-urls=http://0.0.0.0:2379"
+      - "--peer-urls=http://0.0.0.0:2380"
+      - "--advertise-client-urls=http://pd2:2379"
+      - "--advertise-peer-urls=http://pd2:2380"
+      - "--initial-cluster=pd1=http://pd1:2380,pd2=http://pd2:2380,pd3=http://pd3:2380"
+      - "--initial-cluster-state=new"
+      - "--log-file=/data/pd2/pd.log"
+    ports:
+      - "3379:2379"
+      - "3380:2380"
+    volumes:
+      - pd2-data:/data/pd2
+    restart: unless-stopped
+
+  pd3:
+    image: pingcap/pd:latest
+    container_name: tidb-pd3
+    command:
+      - "--name=pd3"
+      - "--data-dir=/data/pd3"
+      - "--client-urls=http://0.0.0.0:2379"
+      - "--peer-urls=http://0.0.0.0:2380"
+      - "--advertise-client-urls=http://pd3:2379"
+      - "--advertise-peer-urls=http://pd3:2380"
+      - "--initial-cluster=pd1=http://pd1:2380,pd2=http://pd2:2380,pd3=http://pd3:2380"
+      - "--initial-cluster-state=new"
+      - "--log-file=/data/pd3/pd.log"
+    ports:
+      - "4379:2379"
+      - "4380:2380"
+    volumes:
+      - pd3-data:/data/pd3
+    restart: unless-stopped
+
+  tikv1:
+    image: pingcap/tikv:latest
+    container_name: tidb-tikv1
+    depends_on:
+      - pd1
+      - pd2
+      - pd3
+    command:
+      - "--addr=0.0.0.0:20160"
+      - "--advertise-addr=tikv1:20160"
+      - "--pd=pd1:2379,pd2:2379,pd3:2379"
+      - "--data-dir=/data/tikv1"
+      - "--log-file=/data/tikv1/tikv.log"
+      - "--status-addr=0.0.0.0:20180"
+    ports:
+      - "20160:20160"
+    volumes:
+      - tikv1-data:/data/tikv1
+    restart: unless-stopped
+
+  tikv2:
+    image: pingcap/tikv:latest
+    container_name: tidb-tikv2
+    depends_on:
+      - pd1
+      - pd2
+      - pd3
+    command:
+      - "--addr=0.0.0.0:20160"
+      - "--advertise-addr=tikv2:20160"
+      - "--pd=pd1:2379,pd2:2379,pd3:2379"
+      - "--data-dir=/data/tikv2"
+      - "--log-file=/data/tikv2/tikv.log"
+      - "--status-addr=0.0.0.0:20180"
+    volumes:
+      - tikv2-data:/data/tikv2
+    restart: unless-stopped
+
+  tikv3:
+    image: pingcap/tikv:latest
+    container_name: tidb-tikv3
+    depends_on:
+      - pd1
+      - pd2
+      - pd3
+    command:
+      - "--addr=0.0.0.0:20160"
+      - "--advertise-addr=tikv3:20160"
+      - "--pd=pd1:2379,pd2:2379,pd3:2379"
+      - "--data-dir=/data/tikv3"
+      - "--log-file=/data/tikv3/tikv.log"
+      - "--status-addr=0.0.0.0:20180"
+    volumes:
+      - tikv3-data:/data/tikv3
+    restart: unless-stopped
+
+  tidb:
+    image: pingcap/tidb:latest
+    container_name: tidb-server
+    depends_on:
+      - pd1
+      - pd2
+      - pd3
+      - tikv1
+      - tikv2
+      - tikv3
+    command:
+      - "--store=tikv"
+      - "--path=pd1:2379,pd2:2379,pd3:2379"
+      - "--status=10080"
+    ports:
+      - "4000:4000"
+      - "10080:10080"
+    restart: unless-stopped
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: tidb-prometheus
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus-data:/prometheus
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.path=/prometheus"
+    ports:
+      - "9090:9090"
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: tidb-grafana
+    depends_on:
+      - prometheus
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: admin
+      GF_INSTALL_PLUGINS: grafana-piechart-panel
+    volumes:
+      - grafana-data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+
+volumes:
+  pd1-data:
+  pd2-data:
+  pd3-data:
+  tikv1-data:
+  tikv2-data:
+  tikv3-data:
+  prometheus-data:
+  grafana-data:
