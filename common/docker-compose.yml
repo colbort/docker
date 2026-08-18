@@ -469,7 +469,7 @@ services:
     networks:
       - common
 
-  conusl:
+  consul:
     image: hashicorp/consul
     container_name: consul
     networks:
